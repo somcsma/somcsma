@@ -1,0 +1,541 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+    text-align: left;
+    justify-content: center;
+}
+
+body {
+    min-height: 100vh;
+    /* margin: 0; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+/* settings for the topnav */ 
+.topnav {
+    background-color:#fff;
+    display: flex;
+    overflow: hidden;
+    font-family: "Red Hat Display", sans-serif;
+  }
+  
+.logo p{
+    float: left;
+    display: block;
+    color: #418FDE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    margin-left: 2em;
+}
+/* Move the right-aligned links */
+.right-align {
+    display: flex;
+    margin-left: auto;
+    margin-right: 2em;
+  }
+
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #418FDE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #418FDE;
+    color: #fff;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #418FDE;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+
+  /* Styles the background image with white text */
+  .wrapper {
+    background-color: #418FDE;  /* In case the image doesn't load, there is a blue background so white text is readable */
+    background-image: url("images/somali_coast.png");
+    background-size: cover;
+    justify-content: center;
+    color:#fff;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    padding-left: 3em;
+    padding-right: 3em;
+
+}
+
+.wrapper > p:nth-child(odd) {
+    font-size: 1.5em;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1.5em;
+    padding-right: 2em;
+}
+
+.wrapper > p {
+    font-size: 3em;
+    justify-content: center;
+    text-align: left;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "photo info" "name info";
+}
+
+.intro img {
+    border-radius: 35px;
+}
+#name {
+    grid-area: name;
+    font-size: 2vw;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+#photo {
+    grid-area: photo;
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding-top: 6em;
+}
+
+#info {
+    padding-top: 0;
+    grid-area: info;
+    font-size: 1.5vw;
+    align-self: center;
+    margin-right: 5em;
+}
+
+#our-community {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.community-sect img {
+    border-radius: 35px;
+}
+.community-sect h1 {
+    font-size: 2.5em;
+    font-style: normal;
+}
+
+.community-sect h2 {
+    font-size: 1.5em;
+    font-style:normal;
+    text-align: center;
+}
+.community {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "one two thr fou" "fiv six sev eit";
+}
+
+.community img {
+    max-width: 100%;
+    height:auto;
+}
+#one { grid-area: one;}
+#two {grid-area: two;}
+#thr {grid-area: thr;}
+#fou {grid-area: fou;}
+#fiv {grid-area: fiv;}
+#six {grid-area: six;}
+#sev {grid-area: sev;}
+#eit {grid-area: eit;}
+
+/* Styling for admin section */
+.admin {
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    margin-left: 35em;      /* there's probably a better way to do this but it's centering the admin text */
+}
+
+.admin h1 {
+    font-size: 2.5em;
+    font-style: normal;
+    align-items: center;
+
+}
+
+.partners {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr, 1.5fr;
+    grid-template-areas: "part part part part" "unp salaam utahfb utahhhs";
+}
+
+#partner-title {
+    grid-area: part;
+    text-align: center;
+    font-size:2.5em;
+    font-style: normal;
+    align-self: center;
+}
+
+.partners img {
+    max-width: 100%;
+    height:auto;
+    padding: 2em;
+    margin-left: 1em;
+}
+#unp {
+    grid-area: unp;
+    align-self: center;
+}
+#salaam {
+    grid-area: salaam;
+    align-self: center;
+}
+#utahfb {
+    grid-area: utahfb;
+    align-self: center;
+}
+
+#utahhhs {
+    grid-area: utahhhs;
+    align-self: center;
+}
+
+/*Styling for things ONLY on food pantry page */
+.content {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: "imgs text";
+}
+
+#text {
+    grid-area: text;
+    text-align: left;
+    font-size:1.5em;
+    font-style: normal;
+    align-self: center;
+    padding: 2em;
+}
+
+.content img {
+    grid-area: imgs;
+    max-width: 100%;
+    height:auto;
+}
+
+/* Styling for things ONLY on the Our Services page */ 
+.sercontent {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 2fr;
+    grid-template-areas: "h h" "list1 list2";
+    padding: 3em;
+    margin-left: 2em;
+}
+
+#h {
+    grid-area: h;
+    text-align: center;
+    font-size:2.5em;
+    font-style: normal;
+    align-self: center;
+}
+
+#list1 {
+    grid-area: list1;
+    font-size:1.5em;
+    font-style: normal;
+    align-self: center;
+}
+
+#list2 {
+    grid-area: list2;
+    font-size:1.5em;
+    font-style: normal;
+    align-self: left;
+}
+
+.evecontent {
+    justify-content: center;
+    padding: 2em;
+    margin-bottom: 15em;
+    text-align: center;
+}
+
+.evecontent h1{font-size: 3em;}
+.evecontent p{font-size: 2em;}
+
+/* Styling for Donations Page */ 
+
+.doncontent {
+    display: grid;
+    /* align-items: center; */
+    justify-content: center;
+    grid-template-columns: 1.5fr 1.5 1fr;
+    grid-template-areas: "sign  build partext";
+}
+
+.doncontent img {
+    max-width: 100%;
+    max-height: 450px;
+    height:auto;
+}
+.doncontent #partext{
+    grid-template-areas: partext;
+    text-align: center;
+    padding: 2em;
+    font-size: 2em;
+}
+.doncontent #build{grid-template-areas: build;}
+.doncontent #sign{grid-template-areas: sign;}
+
+/* Styling for the Resources Page */ 
+.resource-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "col1 col2";
+    margin-left: 10em;
+    padding: 5em;
+    margin-right: 4em;
+}
+.list1{grid-area: col1;}
+.list2{grid-area: col2;}
+.footer {
+    padding: 70px 13% 10px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    align-items:start;
+    /* creates grid for the footer */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    background-color:#418FDE;
+    position:relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-content h4{
+    color:#fff;
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+}
+
+.footer-content img {
+    margin-bottom: 2em;
+}
+
+.footer-content p{
+    margin-bottom: 16px;
+    display: block;
+    color:#fff;
+    font-size: 1em;
+}
+
+
+.icons a{
+    display: inline-block;
+    color: #fff;
+    margin-right: 17px;
+    font-size: 40px;
+}
+
+/* Adjusts styling for smaller screens */
+@media screen and (max-width: 808px) {
+    /*.topnav a { display: none; } /*Hide all links */
+    #somcsma {display:none;}
+    .topnav .right-align { display: none; } /* Hide the right-links container */
+    .topnav .index-link { display: block; } /* Show only the Index link */
+    .topnav a.icon {
+        float: right;
+        display: block; /* Show the hamburger icon */
+    }
+    .wrapper > p {
+        font-size: 2em;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr;
+        grid-template-areas:"photo" "name" "info" ;
+    }
+    #name {
+        font-size: 8vw;
+        grid-template-areas: name;
+        padding-bottom: 1em;
+    }
+    #info {
+        font-size: 4vw;
+        grid-template-areas: info;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        padding-left: 4em;
+    }
+    #photo {
+        grid-template-areas: photo;
+        max-width: fit-content;
+        padding-bottom: 1em;
+    }
+
+    .community {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "one" "two" "thr" "fou" "fiv" "six" "sev" "eit";
+    }
+
+    .community img {
+        max-width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    #two {
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Or adjust as needed */
+    }
+
+    #fiv {
+        grid-area: six;
+        margin-left: 4em;
+    }
+    #six {grid-area: fiv;}
+    #sev {
+        grid-area: eit;
+        margin-left: 4em;
+    }
+    #eit {grid-area: sev;}
+    .admin {
+        justify-self: center;
+        text-align: center;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        margin-left: 0em;  
+    }
+
+    .admin h2{
+        font-size: 1.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .partners {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr, repeat(4, 1fr);
+        grid-template-areas: "part" "unp" "salaam" "utahfb" "utahhhs";
+        padding-bottom: 1em;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "text" "imgs";
+    }
+
+    .sercontent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.15fr 1fr 1fr;
+        grid-template-areas: "h" "list1" "list2";
+    }
+
+    #list1 {
+        font-size: 1em;
+    }
+
+    #list2 {
+        font-size: 1em;
+    }
+
+    .evecontent {margin-bottom: auto;}
+
+    .footer{margin-top: 12em;}
+  }
+
+
+  
+/* Styling for the responsive (hamburger menu) view */
+@media screen and (max-width: 808px) {
+    .topnav.responsive {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-end; /* Align links to the right */
+        position: relative;
+    }
+
+    /* Position the hamburger icon on the top right */
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Display links in a vertical layout */
+    .topnav.responsive .right-align {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Take full width of the container */
+        text-align: right;
+    }
+
+    /* Display each link as a block element for stacking */
+    .topnav.responsive .right-align a {
+        float: none;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: right;
+    }
+
+
+
+
+}
