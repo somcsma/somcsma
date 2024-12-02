@@ -260,19 +260,28 @@ body {
 }
 
 /* Styling for things ONLY on the Our Services page */ 
+/* Styling for things ONLY on the Our Services page */ 
 .sercontent {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.25fr 2fr;
-    grid-template-areas: "h h" "list1 list2";
+    grid-template-rows: 0.25fr 2fr 0.25fr 2fr;
+    grid-template-areas: "h h" "list1 list2" "h2 h2" "art1 art2";
     padding: 3em;
     margin-left: 2em;
 }
 
 #h {
     grid-area: h;
+    text-align: center;
+    font-size:2.5em;
+    font-style: normal;
+    align-self: center;
+}
+
+#h2 {
+    grid-area: h2;
     text-align: center;
     font-size:2.5em;
     font-style: normal;
@@ -291,6 +300,14 @@ body {
     font-size:1.5em;
     font-style: normal;
     align-self: left;
+}
+
+#art1 {
+    grid-area: art1;
+}
+
+#art2 {
+    grid-area: art2;
 }
 
 .evecontent {
