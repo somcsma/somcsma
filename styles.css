@@ -311,14 +311,26 @@ body {
 }
 
 .evecontent {
+    display: grid;
     justify-content: center;
-    padding: 2em;
-    margin-bottom: 15em;
-    text-align: center;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: "imgs text";
 }
 
-.evecontent h1{font-size: 3em;}
-.evecontent p{font-size: 2em;}
+#deets {
+    grid-area: text;
+    text-align: left;
+    font-size:1.5em;
+    font-style: normal;
+    align-self: center;
+    padding: 2em;
+}
+
+.evecontent img {
+    grid-area: imgs;
+    max-width: 100%;
+    height:auto;
+}
 
 /* Styling for Donations Page */ 
 
