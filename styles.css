@@ -326,7 +326,7 @@ body {
     padding: 2em;
 }
 
-.evecontent img {
+#poster {
     grid-area: poster;
     max-width: 100%;
     height:auto;
