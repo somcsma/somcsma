@@ -314,7 +314,7 @@ body {
     display: grid;
     justify-content: center;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-areas: "imgs text";
+    grid-template-areas: "poster deets";
 }
 
 #deets {
