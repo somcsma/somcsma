@@ -1,197 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- google fonts link -->
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCSMA</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/images/Somalia_coat_of_arms.png"
+    alt="Somalia logo for Somali Community Self-Management Center">
+<!-- boxicons link -->
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<head>
-    <!-- google fonts link -->
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCSMA</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/images/Somalia_coat_of_arms.png"
-        alt="Somalia logo for Somali Community Self-Management Center">
-    <!-- boxicons link -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-</head>
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="images/Somalia_coat_of_arms.png"
+                al="logo for Somali Community Self Management Center" width="75em"></a>
+        <h1><a href="index.html" id="somcsma">Somali Community Self-Management Agency</a></h1>
+    </div>
 
-<body>
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Separate container for links that are aligned to the right of the screen -->
+    <nav>
+        <a href="events.html">Events</a>
+        <!-- <a href="services.html"></a> -->
+        <a href="resources.html">Community</a>
+        <!-- <a href="events.html">EVENTS</a> -->
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donations.html" id="donate-button">Donate</a>
+    </nav>
 
-    <section class="topnav" id="myTopnav">
-        <div class="logo">
-            <a href="index.html"><img src="images/scsma_emblem.png"
-                    al="logo for Somali Community Self Management Center" width="75em"></a>
-            <h1><a href="index.html" id="somcsma">SOMALI COMMUNITY SELF-MANAGEMENT AGENCY</a></h1>
-        </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</header>
 
-        <!-- Separate container for links that are aligned to the right of the screen -->
-        <div class="right-align">
-            <a href="foodpantry.html">FOOD PANTRY</a>
-            <a href="services.html">ABOUT US</a>
-            <a href="resources.html">RESOURCES</a>
-            <a href="events.html">EVENTS</a>
-            <a href="donations.html">MAKE A DONATION</a>
-        </div>
-
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+<main>
+    <!-- MISSION -->
+    <section class="hero-section">
+        <h2>Transitioning Refugees Towards Self-Sustainability</h2>
+        <p>
+            Take Action Today
+        </p>
+        <a href="./donations.html">
+            <button>
+                Donate Now
+            </button>
         </a>
-
-    </section>
-    <section class="wrapper">
-        <h2>Somali Community Self-Management Agency</h2>
-        <p>
-            Our mission: To work for the success of the refugees and current community members to undergo a smooth
-            transitional
-            process and attain a self-sustainable status in United States of America and the State of Utah.
-        </p>
-        <p>
-            learn about us
-            <br> <br>
-            <a href="#intro-link"><img src="images/Arrow 1.png"></a>
-        </p>
+        <a href="#about-us-section"><img src="images/Arrow 1.png" alt="arrow pointing down"></a>
     </section>
 
-    <!-- <section class="mission">
-
-</section> -->
-
-    <section class="intro" <a id="intro-link"><img src="images/Arrow 1.png"></a> >
-        <div id="name">
-            Abdirizak Ibrahim, <br> Executive Director
+    <!-- ABOUT US -->
+    <section id="about-us-section">
+        <div>
+            <h3> About Us </h3>
+            <p>
+                Abdirizak Ibrahim, the Executive Director of the Somali Community Self-Management Agency (SOMCSMA),
+                founded the organization after arriving in the United States as a refugee in 1998 and facing numerous
+                personal challenges. Seeking to address these obstacles, SOMCSMA partnered with University Neighborhood
+                Partners (UNP). Together, they have built a strong collaboration focused on enhancing community
+                capacity and well-being, working hand-in-hand with local residents to develop impactful solutions.
+            </p>
         </div>
-        <div id="photo">
-            <img src="images/abdirizak_standing_in_crowd.jpg" alt="Abdi standing among sitting crowd" />
-        </div>
-        <div id="info">
-            Abdirizak Ibrahim, the Executive Director of the Somali Community Self-Management Agency (SOMCSMA),
-            founded the organization after arriving in the United States as a refugee in 1998 and facing numerous
-            personal challenges. Seeking to address these obstacles, SOMCSMA partnered with University Neighborhood
-            Partners (UNP). Together, they have built a strong collaboration focused on enhancing community
-            capacity and well-being, working hand-in-hand with local residents to develop impactful solutions.
+        <img src="./images/SOMCSMA_office.jpg" alt="people standing in front of SOMCSMA office">
+    </section>
+
+    <!-- SERVICES -->
+
+    <section id="services-section">
+        <h3>What We Offer</h3>
+        <div>
+            <article>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path
+                        d="M19.006 3.705a.75.75 0 1 0-.512-1.41L6 6.838V3a.75.75 0 0 0-.75-.75h-1.5A.75.75 0 0 0 3 3v4.93l-1.006.365a.75.75 0 0 0 .512 1.41l16.5-6Z" />
+                    <path fill-rule="evenodd"
+                        d="M3.019 11.114 18 5.667v3.421l4.006 1.457a.75.75 0 1 1-.512 1.41l-.494-.18v8.475h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3v-9.129l.019-.007ZM18 20.25v-9.566l1.5.546v9.02H18Zm-9-6a.75.75 0 0 0-.75.75v4.5c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75H9Z"
+                        clip-rule="evenodd" />
+                </svg>
+                <h4>Family & Community Programs</h4>
+                <hr>
+                <ul>
+                    <li>-Youth Sports</li>
+                    <li>-After School Programs</li>
+                    <li>-Parent Education</li>
+                    <li>-Senior Support Programs</li>
+                </ul>
+            </article>
+            <article>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM8.547 4.505a8.25 8.25 0 1 0 11.672 8.214l-.46-.46a2.252 2.252 0 0 1-.422-.586l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.211.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.654-.261a2.25 2.25 0 0 1-1.384-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.279-2.132Z"
+                        clip-rule="evenodd" />
+                </svg>
+                <h4>Cultural & Behavioral Orientation</h4>
+                <hr>
+                <ul>
+                    <li>-Translation & Interpretation</li>
+                    <li>-Drug & Tobacco Intervention</li>
+                    <li>-Public Relations</li>
+                    <li>-Open Internet Lab</li>
+                </ul>
+            </article>
+            <article>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd"
+                        d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                        clip-rule="evenodd" />
+                    <path
+                        d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
+                </svg>
+                <h4>Employment & Support Services</h4>
+                <hr>
+                <ul>
+                    <li>-Training Programs</li>
+                    <li>-Job Search & Employment Referral</li>
+                    <li>-Counseling & Case Management</li>
+                </ul>
+            </article>
+            <article>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path d="M12 7.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
+                    <path fill-rule="evenodd"
+                        d="M1.5 4.875C1.5 3.839 2.34 3 3.375 3h17.25c1.035 0 1.875.84 1.875 1.875v9.75c0 1.036-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 0 1 1.5 14.625v-9.75ZM8.25 9.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM18.75 9a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V9.75a.75.75 0 0 0-.75-.75h-.008ZM4.5 9.75A.75.75 0 0 1 5.25 9h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H5.25a.75.75 0 0 1-.75-.75V9.75Z"
+                        clip-rule="evenodd" />
+                    <path
+                        d="M2.25 18a.75.75 0 0 0 0 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 0 0-.75-.75H2.25Z" />
+                </svg>
+                <h4>Administrative & Financial Assistance</h4>
+                <hr>
+                <ul>
+                    <li>-Routine Office Work</li>
+                    <li>-Accounting & Bookkeeping</li>
+                    <li>-Housing Assistance for Homeless</li>
+                </ul>
+            </article>
         </div>
     </section>
 
-    <!-- Creates 8 evenly size boxes, with alternating photos and text describing the community  -->
-    <section class="community-sect">
-        <h1 id="our-community">
-            Our Community
-        </h1>
-        <div class="community">
-            <div id="one">
-                <img src="images/menwomen.JPG" alt="Somali community members posing for photo" id="menwomen" />
-            </div>
-            <h3 id="two">
-                Men & Women
-            </h3>
-            <div id="thr">
-                <img src="images/table.JPG" alt="Refugees discussing work at a table" id="table" />
-            </div>
-            <h3 id="fou">
-                Somali Refugees
-                </h2>
-                <h3 id="fiv">
-                    Senior Community Members
-                </h3>
-                <div id="six">
-                    <img src="images/community.JPG" alt="Seniors standing in front of SCSMA office" id="community" />
-                </div>
-                <h3 id="sev">
-                    Children & Youth
-                </h3>
-                <div id="eit">
-                    <img src="images/chip.JPG" alt="UofU students and youth posing for a photo" id="refugee" />
-                </div>
-        </div>
-    </section>
-    <!-- Admin section - no grid format, just 2 headers  -->
-    <section class="admin">
-        <h2>
-            Administration
-        </h2>
+    <!-- STAFF  -->
+    <section id="staff-section">
+        <hr noshade>
         <h3>
-            Abdirizak Ibrahim - Executive Director <br>
-            Faduma Abulkadir - Deputy Director <br>
-            Ghulam Hasnain - Treasurer <br>
-            Said Ali - Youth Administrator <br>
-            Asad Ibrahim - Youth Coordinator <br>
-            Saed Ali - Women’s Health Coordinator <br>
-            Zainab Abdi - Secretary <br>
-            Abdiweli Hersi - Administrator
+            Our Staff
         </h3>
+        <div>
+            <article>
+                <img src="./images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="placeholder profile">
+                <h4>Abdirizak Ibrahim</h4>
+                <p>Executive Director</p>
+            </article>
+            <article>
+                <img src="./images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="placeholder profile">
+                <h4>Faduma Abulkadir</h4>
+                <p>Deputy Director</p>
+            </article>
+            <article>
+                <img src="./images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="placeholder profile">
+                <h4>Ghulam Hasnain</h4>
+                <p>Treasurer</p>
+            </article>
+            <article>
+                <img src="./images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="placeholder profile">
+                <h4>Said Ali</h4>
+                <p>Youth Administrator</p>
+            </article>
+            <article>
+                <img src="./images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="placeholder profile">
+                <h4>Asad Ibrahim</h4>
+                <p>Youth Coordinator</p>
+            </article>
+            <article>
+                <img src="./images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="placeholder profile">
+                <h4>Saed Ali</h4>
+                <p>Women's Health Coordinator</p>
+            </article>
+            <article>
+                <img src="./images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="placeholder profile">
+                <h4>Zainab Abdi</h4>
+                <p>Secretary</p>
+            </article>
+            <article>
+                <img src="./images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="placeholder profile">
+                <h4>Abdiweli Hersi</h4>
+                <p>Administrator</p>
+            </article>
+        </div>
     </section>
-    <!-- Our Partners section, uses grid layout with uneven rows  -->
-    <section class="partners">
-        <h2 id="partner-title">
-            Our Partners
-        </h2>
-        <div id="unp">
-            <img src="images/unp.png" alt="University Neighborhood Partners logo" />
-        </div>
-        <div id="salaam">
-            <img src="images/salaam.jpg" alt="SALAAM logo" />
-        </div>
-        <div id="utahfb">
-            <img src="images/utahfb.png" alt="Utah Food Bank logo" />
-        </div>
-        <div id="utahhhs">
-            <img src="images/utahhhs.jpg" alt="UtahHHS logo" />
-        </div>
-    </section>
+</main>
 
-    <section class="footer">
-        <div id="footer-content">
-            <img src="images/logo.png" alt="Somalia crest logo" id="logo" width="300em" />
-        </div>
-        <div class="footer-content">
+<footer id="footer">
+    <div class="footer-content">
+        <img src="images/Somalia_coat_of_arms.png" alt="Somalia crest logo" id="logo" width="300em" />
+        <div>
             <a href="https://share.google/uKXdjCz84PHox9PxE" target="_blank">
-                <h3>Address</h3>
-                <p>1151 S Redwood Rd</p>
-                <p> Unit 102</p>
-                <p> Salt Lake City</p>
-                <p> UT 8F4104</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                </svg>
+            </a>
+            <a href="https://share.google/uKXdjCz84PHox9PxE" target="_blank">
+                <p>1151 S Redwood Rd Unit 102, Salt Lake City, UT 84104</p>
             </a>
         </div>
-        <div class="footer-content">
-            <h3>Contact Us</h3>
-            <p>Phone: 801 - 487 - 0822</p>
-            <p> Fax: 385 - 261 - 2722</p>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            </svg>
+            <p>Phone: (801)487-0822</p>
+            <p> Fax: (385)261-2722</p>
             <p> Email: somcsma@yahoo.com</p>
-            <div class="icons">
-                <a href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank"><i
-                        class='bx bxl-facebook-circle'></i></a>
-                <a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"><i
-                        class='bx bxl-instagram'></i></a>
-                <a href="https://www.linkedin.com/in/abdirizak-ibrahim-a9a162140/" target="_blank"><i
-                        class='bx bxl-linkedin-square'></i></a>
-            </div>
         </div>
-        <div class="footer-content">
-            <h3>Availability</h3>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
             <p>10 AM to 6 PM</p>
-            <p> Open 7 Days a Week</p>
+            <p>Open 7 Days a Week</p>
         </div>
-    </section>
-    <!-- Javascript for the hamburger menu to be clicked when screen is smaller  -->
-    <script>
-        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+        <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank"><i
+                    class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"><i
+                    class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/in/abdirizak-ibrahim-a9a162140/" target="_blank"><i
+                    class='bx bxl-linkedin-square'></i></a>
+        </div>
+    </div>
+    <div class="partners">
+        <img src="images/unp_logo.png" alt="University Neighborhood Partners logo" />
+        <img class="salaam" src="images/salaam_logo.png" alt="SALAAM logo" />
+        <img src="images/utahfb_logo.png" alt="Utah Food Bank logo" />
+        <img src="images/utahhhs_logo.png" alt="UtahHHS logo" />
+    </div>
+</footer>
+<!-- Javascript for the hamburger menu to be clicked when screen is smaller  -->
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
         }
-    </script>
-
-
-</body>
-
-
-</html>
+    }
+</script>
 
 
 <!-- <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this profile on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">Abdirizak Ibrahim</a> (@<a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">somcsma</a>) • Instagram photos and videos</p></div></blockquote>

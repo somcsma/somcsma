@@ -1,99 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <!-- google fonts link -->
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCSMA</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- boxicons link -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-</head>
+<!-- google fonts link -->
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCSMA</title>
+<link rel="stylesheet" href="styles.css">
+<!-- boxicons link -->
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-<body>
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <section class="topnav" id="myTopnav">
-        <div class="logo">
-            <a href="index.html"><img src="images/scsma_emblem.png" width="75em"></a>
-            <a href="index.html" id="somcsma">SOMALI COMMUNITY SELF-MANAGEMENT AGENCY</a>
-        </div>
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="images/Somalia_coat_of_arms.png"
+                al="logo for Somali Community Self Management Center" width="75em"></a>
+        <h1><a href="index.html" id="somcsma">Somali Community Self-Management Agency</a></h1>
+    </div>
 
-        <!-- Separate container for links that are aligned to the right of the screen -->
-        <div class="right-align">
-            <a href="foodpantry.html">FOOD PANTRY</a>
-            <a href="services.html">ABOUT US</a>
-            <a href="resources.html">RESOURCES</a>
-            <a href="events.html">EVENTS</a>
-            <a href="donations.html">MAKE A DONATION</a>
-        </div>
+    <!-- Separate container for links that are aligned to the right of the screen -->
+    <nav>
+        <a href="events.html">Events</a>
+        <!-- <a href="services.html"></a> -->
+        <a href="resources.html">Community</a>
+        <!-- <a href="events.html">EVENTS</a> -->
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donations.html" id="donate-button">Donate</a>
+    </nav>
 
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </section>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</header>
 
-    <section class="evecontent">
-        <img src="images/eidalfitr.png" id="poster" />
-        <div id="deets">
-            <h1>Eid Al Fitr Celebration</h1>
-            <br>
-            <p>
-                Date: April 5, 2025 (Saturday) <br>
-                Time: 4pm-9pm <br>
-                Location: 1578 W. 1700 S., SLC Ut 84104 <br>
-            </p>
-        </div>
-    </section>
-
-    <section class="footer">
-        <div id="footer-content">
-            <img src="images/logo.png" alt="Somalia crest logo" id="logo" width="300em" />
-        </div>
-        <div class="footer-content">
-            <h3>Address</h3>
-            <p>1151 S Redwood Rd</p>
-            <p> Unit 102</p>
-            <p> Salt Lake City</a></p>
-            <p> UT 84104</a></p>
-        </div>
-        <div class="footer-content">
-            <h3>Contact Us</h3>
-            <p>Phone: 801 - 487 - 0822</p>
-            <p> Fax: 385 - 261 - 2722</p>
-            <p> Email: somcsma@yahoo.com</p>
-            <div class="icons">
-                <a href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank"><i
-                        class='bx bxl-facebook-circle'></i></a>
-                <a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"><i
-                        class='bx bxl-instagram'></i></a>
-                <a href="https://www.linkedin.com/in/abdirizak-ibrahim-a9a162140/" target="_blank"><i
-                        class='bx bxl-linkedin-square'></i></a>
+<section id="events-section">
+    <div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd"
+                d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+                clip-rule="evenodd" />
+        </svg> -->
+        <div class="food-pantry-card">
+            <h2>Food Pantry</h2>
+            <div>
+                <p>Date: Saturday, 05/25/2025</p>
+                <p>Time: 4:00 PM - 9:00 PM</p>
+                <p>Location: 1578 W 1700 S, Salt Lake City, UT 84104 </p>
             </div>
+            <a href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank"><button>Facebook
+                    Link</button></a>
         </div>
-        <div class="footer-content">
-            <h3>Availability</h3>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd"
+                d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                clip-rule="evenodd" />
+        </svg> -->
+    </div>
+</section>
+
+<section id="news-section">
+    <h2> Us in The News</h2>
+    <a href="https://kutv.com/features/pay-it-forward/salt-lake-city-somali-agency-thrives-as-lifeline-for-resettling-african-newcomers" target="_blank">
+        <img src="./images/KUTV_news_article.webp" alt="KUTV news article pic">
+        <div>
+            <h3>Salt Lake City Somali agency thrives as lifeline for resettling African newcomers</h3>
+            <p>By Mark Koelbel | November 6th, 2024 at 11:04 p.m.</p>
+            <p class="desc">The Somali Community Self-Management Agency in Salt Lake City is a full-service support
+                agency that helps African refugees become self sufficient as they transition into our local communities
+                from places like Somalia and the Sudan.
+
+                Abdirizak Ibrahim is the executive director of this self-contained little city at1578 West and 1700
+                South.
+
+                “We have a restaurant, a grocery store, a barber shop, a clothing store, a tailor shop and we also have
+                a mosque for prayer," he said.
+
+                Ibrahim said many Somali refugees come to Utah with nothing. They arrive here to escape civil war and
+                violence in their home country. Most of them are already in debt when they get to America.</p>
+        </div>
+    </a>
+    <a href="https://www.ksl.com/article/50580152/salt-lake-is-totally-different-helping-utahs-largest-refugee-community-of-10000" target="_blank">
+        <img src="./images/KSL_news_article.jpeg" alt="news article pic">
+        <div>
+            <h3>'Salt Lake is totally different': Helping Utah's largest refugee community of 10,000
+            </h3>
+            <p>By Sydnee Chapman Gonzalez | February 25, 2023 at 4:04 p.m.</p>
+            <p class="desc">Ibrahim had fled his home in Somalia because of the country's civil war, an ongoing conflict
+                that's claimed between 450,000 and 1.5 million lives, displaced over 1.5 million individuals internally
+                and forced another 800,000 to flee the country. He lived in a refugee camp in neighboring Kenya for six
+                years before coming to Utah as a refugee.
+
+                "When I came, I didn't know anything about the system," he said. "Imagine coming from different country
+                and you don't really understand. Salt Lake is totally different. Life was very hard the next couple of
+                months, but we try to take it slowly, step by step."
+
+                Ibrahim's first time using public transportation is an example of the difficulty he experienced. During
+                his first week in Utah, he saw individuals riding Utah Transit Authority buses and using the pull chords
+                to stop. Ibrahim decided to try the bus out for himself after working up the courage for a few days.</p>
+        </div>
+    </a>
+    <!-- <iframe
+            src="https://www.ksl.com/article/50580152/salt-lake-is-totally-different-helping-utahs-largest-refugee-community-of-10000"
+            title="KSL News" width="100%" height="600" style="border:0; border-radius:3px;">
+        </iframe> -->
+</section>
+
+<footer id="footer">
+    <div class="footer-content">
+        <img src="images/Somalia_coat_of_arms.png" alt="Somalia crest logo" id="logo" width="300em" />
+        <div>
+            <a href="https://share.google/uKXdjCz84PHox9PxE" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                </svg>
+            </a>
+            <a href="https://share.google/uKXdjCz84PHox9PxE" target="_blank">
+                <p>1151 S Redwood Rd Unit 102, Salt Lake City, UT 84104</p>
+            </a>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            </svg>
+            <p>Phone: (801)487-0822</p>
+            <p> Fax: (385)261-2722</p>
+            <p> Email: somcsma@yahoo.com</p>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
             <p>10 AM to 6 PM</p>
-            <p> Open 7 Days a Week</p>
+            <p>Open 7 Days a Week</p>
         </div>
-    </section>
+        <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank"><i
+                    class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"><i
+                    class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/in/abdirizak-ibrahim-a9a162140/" target="_blank"><i
+                    class='bx bxl-linkedin-square'></i></a>
+        </div>
+    </div>
+    <div class="partners">
+        <img src="images/unp_logo.png" alt="University Neighborhood Partners logo" />
+        <img class="salaam" src="images/salaam_logo.png" alt="SALAAM logo" />
+        <img src="images/utahfb_logo.png" alt="Utah Food Bank logo" />
+        <img src="images/utahhhs_logo.png" alt="UtahHHS logo" />
+    </div>
+</footer>
 
-    <script>
-        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
         }
-    </script>
-
-</body>
-
-</html>
+    }
+</script>
