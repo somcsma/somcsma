@@ -13,7 +13,7 @@
 
 h3 {
     font-weight: bold;
-    font-size: 2.65rem;
+    font-size: max(4vw, 24px);
 }
 
 /* HEADER */
@@ -207,7 +207,7 @@ header .icon {
 }
 
 .hero-section h2 {
-    margin-top: 10rem;
+    margin-top: 4rem;
     font-size: 3rem;
     max-width: 75vw;
     text-align: center;
@@ -216,6 +216,11 @@ header .icon {
 .hero-section p {
     font-size: 1.5rem;
     justify-content: center;
+}
+
+.hero-section a.arrow {
+    color: white;
+    width: 2rem;
 }
 
 .hero-section button {
@@ -231,6 +236,7 @@ header .icon {
 /* ABOUT US */
 
 #about-us-section {
+    width: 100vw;
     color: black;
     text-align: center;
     display: flex;
@@ -242,6 +248,7 @@ header .icon {
 }
 
 #about-us-section div {
+    width: max(60vw, 7rem);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -249,16 +256,15 @@ header .icon {
 
 #about-us-section img {
     object-fit: cover;
-    height: 30vw;
-    width: 30vw;
+    height: max(30vw, 5rem);
+    width: max(30vw, 5rem);
     border-radius: 60%;
     box-shadow: 1px 1px 6px black;
 }
 
 #about-us-section p {
     line-height: 1.5;
-    font-size: 1rem;
-    width: max(400px, 45vw);
+    font-size: max(2vw, 12px);
 }
 
 /* SERVICES */
@@ -268,8 +274,7 @@ header .icon {
     color: white;
     border-top: 5px solid #156fb0;
     border-bottom: 5px solid #156fb0;
-    /* height: 100vh;
-    max-height: 140vh; */
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,9 +284,10 @@ header .icon {
 }
 
 #services-section div {
-    width: max(600px, 85vw);
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: space-around;
     gap: 1rem;
 }
@@ -296,17 +302,19 @@ header .icon {
 }
 
 #services-section article h4 {
+    width: max(14vw, 10rem);
     text-align: center;
     font-weight: bold;
     color: white;
     font-size: 1.25rem;
+    overflow-wrap: break-word;
 }
 
 #services-section article li {
     font-size: 0.8rem;
-    width: 12vw;
+    width: max(12vw, 10rem);
     list-style-type: none;
-    text-align: left;
+    text-align: center;
     line-height: 1.5;
 }
 
@@ -326,10 +334,11 @@ header .icon {
 /* STAFF */
 
 #staff-section {
-    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3rem 0;
 }
 
 #staff-section h3 {
@@ -344,7 +353,7 @@ header .icon {
 }
 
 #staff-section article {
-    width: 20vw;
+    width: max(20vw, 14rem);
     height: auto;
     text-align: center;
     display: flex;
@@ -395,7 +404,7 @@ header .icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.35rem;
+    gap: 1.25rem;
     padding: 2rem;
     margin-right: 0.75rem;
     border-radius: 0.5rem;
@@ -415,13 +424,21 @@ header .icon {
     font-size: max(1.75vw, 18px);
 }
 
-#events-section button {
+.events-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.25rem 0.5rem;
+}
+
+.events-buttons button {
     background-color: #418FDE;
     border: 2px solid #156fb0;
     padding: 0.5rem 1rem;
     border-radius: 0.35rem;
     font-weight: bold;
-    font-size: max(2vw, 18px);
+    font-size: max(1.65vw, 16px);
     color: white;
     text-decoration: none;
 }
@@ -473,38 +490,33 @@ header .icon {
 }
 
 #news-section h3 {
-    font-size: max(2.5vw, 20px);
+    font-size: max(2.25vw, 18px);
 }
 
-#news-section h3:hover{
+#news-section h3:hover {
     text-decoration: underline;
 }
 
 #news-section p {
-    font-size: max(2vw, 16px);
+    font-size: max(1.70vw, 16px);
 }
 
 #news-section .desc {
     /* height: 5rem; */
     overflow: hidden;
-    font-size: max(1.75vw, 16px);
+    font-size: max(1.5vw, 15px);
 }
 
-#our-community {
+.community-sect h2 {
+    position: absolute;
+    top: 2rem;
     align-self: center;
     justify-self: center;
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
-}
-
-.community-sect img {
-    border-radius: 35px;
-}
-
-.community-sect h1 {
-    font-size: 2.5em;
-    font-style: normal;
+    font-size: max(4.5vw, 42px);
+    color: white;
 }
 
 .community-sect h3 {
@@ -513,14 +525,57 @@ header .icon {
     text-align: center;
 }
 
+.community-sect div img.one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/menwomen.JPG");
+}
+
+.community-sect div img.one:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/menwomen.JPG");
+}
+
+.community-sect div img.two {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/table.JPG");
+}
+
+.community-sect div img.two:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/table.JPG");
+}
+
+.community-sect div img.three {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/community.JPG");
+}
+
+.community-sect div img.three:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/community.JPG");
+}
+
+.community-sect div img.four {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/chip.JPG");
+}
+
+.community-sect div img.four:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/chip.JPG");
+}
+
+.community-sect div img {
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 .community {
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
     justify-content: center;
-    align-items: center;
-    grid-template-areas: "one two thr fou" "fiv six sev eit";
+    align-items: flex-start;
+}
+
+.community div p {
+    display:none;
+    position: absolute;
 }
 
 .community img {
@@ -689,25 +744,19 @@ header .icon {
 
 /* Styling for the Resources Page */
 .resource-list {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "col1 col2";
     margin-left: 10em;
     padding: 5em;
     margin-right: 4em;
 }
 
-.list1 {
-    grid-area: col1;
+.resource-list h2 {
+    font-size: 1.75rem;
 }
 
-.list2 {
-    grid-area: col2;
+.resource-list h3 {
+    font-weight: normal;
+    font-size: 1.25rem;
 }
-
-
-
 
 /* Styling for the responsive (hamburger menu) view */
 @media screen and (max-width: 808px) {
