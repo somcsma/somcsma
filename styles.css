@@ -713,49 +713,106 @@ header .icon {
 
 /* Styling for Donations Page */
 
-.doncontent {
-    display: grid;
-    /* align-items: center; */
-    justify-content: center;
-    grid-template-columns: 1.5fr 1.5 1fr;
-    grid-template-areas: "sign  build partext";
-}
-
-.doncontent img {
-    max-width: 100%;
-    max-height: 450px;
-    height: auto;
-}
-
-.doncontent #partext {
-    grid-template-areas: partext;
-    text-align: center;
-    padding: 2em;
-    font-size: 1.6em;
-}
-
-.doncontent #build {
-    grid-template-areas: build;
-}
-
-.doncontent #sign {
-    grid-template-areas: sign;
+.donate-section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 5rem;
+    padding: 2rem;
 }
 
 /* Styling for the Resources Page */
-.resource-list {
-    margin-left: 10em;
-    padding: 5em;
-    margin-right: 4em;
+.resources-list article.hidden {
+    display: none !important;
 }
 
-.resource-list h2 {
-    font-size: 1.75rem;
+.resources-section {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.resource-list h3 {
-    font-weight: normal;
-    font-size: 1.25rem;
+.resources-section .resources-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.resources-section .resources-title p {
+    width: 75%;
+    text-align: center;
+}
+
+.resources-section ul.filter-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.resources-section ul.filter-buttons li button:hover {
+    background-color: black;
+    border:2px solid black;
+}
+
+.resources-section .filter-buttons .button-clicked {
+    background-color: black !important;
+}
+
+.resources-section ul li {
+    list-style-type: none;
+}
+
+.resources-section li button {
+    font-size: 1rem;
+    color: white;
+    padding: 0.65rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.resources-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+}
+
+.resources-list article img {
+    width: 7rem;
+}
+
+.resources-list article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15%;
+    border: 2px solid lightgrey;
+    padding: 1rem 1.5rem;
+    /* border-radius: 10px; */
+    width: 100%;
+}
+
+.resources-list article div {
+    width: 40%;
+}
+
+.resources-section .resources-tags li{
+    padding: 0.25rem;
+    background-color: var(--accent-color);
+    border: 2px solid #e2a116;
+    border-radius: 8px;
 }
 
 /* Styling for the responsive (hamburger menu) view */
