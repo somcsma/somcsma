@@ -16,6 +16,10 @@ h3 {
     font-size: max(4vw, 24px);
 }
 
+p {
+    font-family: Helvetica, sans-serif;
+}
+
 /* HEADER */
 
 header {
@@ -243,12 +247,12 @@ header .icon {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     padding: 4rem 2rem;
 }
 
 #about-us-section div {
-    width: max(60vw, 7rem);
+    width: max(50vw, 7rem);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -264,7 +268,7 @@ header .icon {
 
 #about-us-section p {
     line-height: 1.5;
-    font-size: max(2vw, 12px);
+    font-size: max(1.75vw, 12px);
 }
 
 /* SERVICES */
@@ -399,13 +403,13 @@ header .icon {
 
 #events-section .food-pantry-card {
     background-color: #ffffffDE;
-    height: 65vh;
-    width: max(35vw, 350px);
+    width: max(32vw, 350px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.25rem;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
+    margin-top: 2rem;
     margin-right: 0.75rem;
     border-radius: 0.5rem;
     color: black;
@@ -714,11 +718,31 @@ header .icon {
 /* Styling for Donations Page */
 
 .donate-section {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
     margin-top: 5rem;
     padding: 2rem;
+}
+
+.donate-section  .donate-description{
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    width: 60%;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.donate-section h2 {
+    padding-bottom: 1.25rem;
+    color: var(--primary-color);
+    font-size: 2.25rem;
+}
+
+.donate-section .donate-additional {
+    width: 45%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 1.25rem;
+    font-size: 1rem;
+    color: var(--primary-color);
 }
 
 /* Styling for the Resources Page */
@@ -730,7 +754,7 @@ header .icon {
     width: 85%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     align-items: center;
     margin: 0 auto;
     padding: 2rem;
@@ -761,6 +785,12 @@ header .icon {
     border:2px solid black;
 }
 
+.resources-section ul.filter-buttons li button.all {
+    background-color: var(--accent-color);
+    border: 2px solid #e2a116;
+    color: black;
+}
+
 .resources-section .filter-buttons .button-clicked {
     background-color: black !important;
 }
@@ -782,9 +812,9 @@ header .icon {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -797,15 +827,38 @@ header .icon {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 15%;
+    gap: 8%;
     border: 2px solid lightgrey;
     padding: 1rem 1.5rem;
     /* border-radius: 10px; */
     width: 100%;
+    background-color: rgb(250, 250, 250);
 }
 
 .resources-list article div {
+    width: 50%;
+}
+
+.resources-section .resources-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.25rem;
     width: 40%;
+}
+
+.resources-list article a {
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.resources-list article a:hover {
+    text-decoration: underline;
 }
 
 .resources-section .resources-tags li{
@@ -813,6 +866,8 @@ header .icon {
     background-color: var(--accent-color);
     border: 2px solid #e2a116;
     border-radius: 8px;
+    font-size: 0.75rem;
+    font-family: Helvetica, sans-serif;
 }
 
 /* Styling for the responsive (hamburger menu) view */
