@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Sawarabi Mincho", serif;
+    font-family: "Helvetica", serif;
     justify-content: center;
 }
 
@@ -16,55 +16,61 @@ h3 {
     font-size: max(4vw, 24px);
 }
 
+h2 {
+    color: var(--primary-color);
+}
+
 p {
     font-family: Helvetica, sans-serif;
 }
 
+label, input, button {
+    font-family: Helvetica, sans-serif;
+}
 /* HEADER */
 
-header {
+/* header {
     font-family: "Sawarabi Mincho", cursive;
-}
+} */
 
 header a,
 header h1 {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-color);
+    border-bottom: 4px solid #156fb0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+    z-index: 100;
 }
 
 .logo {
     font-weight: 600;
-    background-color: var(--primary-color);
-    border-bottom: 7px solid #156fb0;
-    border-bottom-right-radius: 30%;
-    height: 5rem;
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem;
-    z-index: 10;
+}
+
+.logo img {
+    width: 2.5rem;
 }
 
 .logo h1 {
-    width: 30vw;
-    max-width: 35vw;
+    width: 40vw;
     text-align: left;
 }
 
 nav {
     font-weight: 600;
-    background-color: var(--primary-color);
-    border-bottom: 5px solid #156fb0;
-    height: 3.75rem;
-    width: 100%;
-    position: absolute;
-    top: 0rem;
-    right: 0rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -74,9 +80,9 @@ nav {
 
 #donate-button {
     background-color: var(--accent-color);
-    border-radius: 4px;
+    border-radius: 8px;
     color: rgb(40, 40, 40);
-    padding: 4px 6px;
+    padding: 8px 12px;
 }
 
 #donate-button:hover,
@@ -104,7 +110,7 @@ header .icon {
 #footer {
     font-size: 14px;
     background-color: #418FDE;
-    border-top: 7px solid #156fb0;
+    /* border-top: 4px solid #47b1fc; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,14 +118,14 @@ header .icon {
     padding: 2rem 0 0.5rem 0;
 }
 
-#footer img {
+#footer .footer-content img {
     align-self: center;
-    width: 10vw;
+    width: max(10vw, 60px);
     margin-right: 1rem;
 }
 
 #footer svg {
-    width: 3vw;
+    width: max(3vw, 30px) ;
     color: white;
     margin-bottom: 1rem;
 }
@@ -137,6 +143,11 @@ header .icon {
     justify-content: space-around;
     align-items: flex-start;
     gap: 0.5rem;
+    word-break: break-all;
+}
+
+.footer-content a {
+    color: white;
 }
 
 .footer-content>div {
@@ -162,26 +173,35 @@ header .icon {
 }
 
 .footer-content .icons a {
-    font-size: 3vw;
+    font-size: max(3vw, 30px);
     color: white;
     margin-right: 1rem;
 }
 
 #footer .partners {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
+#footer hr.footer-bar {
+    width: 75%;
+    height: 1px;
+    border: none;
+    background-color: white;
+}
+
 #footer .partners img {
-    height: 9vw;
+    height: max(9vw, 80px);
     width: auto;
 }
 
 #footer img.salaam {
-    height: 4vw;
+    height: max(4vw,30px);
     width: auto;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 /* MISSION */
@@ -190,16 +210,14 @@ header .icon {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/menwomen.JPG");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     color: white;
     height: 95vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 2.5rem;
 }
 
 .hero-section>p:nth-child(odd) {
@@ -211,9 +229,10 @@ header .icon {
 }
 
 .hero-section h2 {
+    color: white;
     margin-top: 4rem;
-    font-size: 3rem;
-    max-width: 75vw;
+    font-size: max(4vw, 32px);
+    width: 75vw;
     text-align: center;
 }
 
@@ -224,35 +243,40 @@ header .icon {
 
 .hero-section a.arrow {
     color: white;
-    width: 2rem;
+    width: 4.5rem;
+    margin-top: -25px;
+}
+
+.hero-section a.arrow:hover {
+    transform: scale(1.15);
 }
 
 .hero-section button {
+    font-weight: 600;
     background-color: var(--accent-color);
-    /* border: 1px solid var(--accent-color); */
-    box-shadow: 0px 0px 4px rgb(136, 75, 1);
+    border: 1px solid #f9ca64;
     color: rgb(40, 40, 40);
-    font-size: 1.5rem;
-    padding: 8px;
+    font-size: 1.25rem;
+    padding: 18px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 /* ABOUT US */
 
 #about-us-section {
-    width: 100vw;
     color: black;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding: 4rem 2rem;
+    padding: 3rem 0;
 }
 
 #about-us-section div {
-    width: max(50vw, 7rem);
+    width: max(40vw, 7rem);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -263,12 +287,16 @@ header .icon {
     height: max(30vw, 5rem);
     width: max(30vw, 5rem);
     border-radius: 60%;
-    box-shadow: 1px 1px 6px black;
+    border: 8px solid var(--primary-color);
+}
+
+#about-us-section h3 {
+    color: var(--primary-color);
 }
 
 #about-us-section p {
     line-height: 1.5;
-    font-size: max(1.75vw, 12px);
+    font-size: max(1.35vw, 14px);
 }
 
 /* SERVICES */
@@ -276,9 +304,6 @@ header .icon {
 #services-section {
     background-color: var(--primary-color);
     color: white;
-    border-top: 5px solid #156fb0;
-    border-bottom: 5px solid #156fb0;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -288,49 +313,61 @@ header .icon {
 }
 
 #services-section div {
+    width: max(85%, 35rem);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-around;
     gap: 1rem;
 }
 
 #services-section article {
-    border-radius: 6px;
+    background-color:#ffffff;
+    color: black;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    width: 16rem;
+    gap: 0.5rem;
+    height: 23rem;
+    padding: 0 1rem;
+}
+
+#services-section article:hover {
+    translate: 0px -10px;
+    box-shadow: 2px 2px 6px black;
 }
 
 #services-section article h4 {
-    width: max(14vw, 10rem);
+    width: max(16vw, 12rem);
     text-align: center;
     font-weight: bold;
-    color: white;
+    color: var(--primary-color);
     font-size: 1.25rem;
     overflow-wrap: break-word;
 }
 
+#services-section article ul {
+    width: 70%;
+    line-break:loose;
+}
+
 #services-section article li {
-    font-size: 0.8rem;
-    width: max(12vw, 10rem);
-    list-style-type: none;
-    text-align: center;
-    line-height: 1.5;
+    font-size: 1rem;
+    list-style-type: square;
+    text-align: left;
+    margin-top: 0.5rem;
 }
 
 #services-section hr {
-    width: 70%;
+    width: 75%;
     border: none;
-    height: 2px;
-    background-color: white;
+    height: 1.5px;
+    background-color: black;
 }
 
 #services-section svg {
-    /* align-self: center; */
     width: 4.5rem;
     color: var(--accent-color);
 }
@@ -338,7 +375,7 @@ header .icon {
 /* STAFF */
 
 #staff-section {
-    width: 100vw;
+    width: 95vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -346,18 +383,22 @@ header .icon {
 }
 
 #staff-section h3 {
+    color: black;
     margin-bottom: 1.5rem;
 }
 
 #staff-section div {
+    width: min(90vw, 65rem);
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    row-gap: 2rem;
 }
 
 #staff-section article {
-    width: max(20vw, 14rem);
+    width: max(18vw, 12rem);
     height: auto;
     text-align: center;
     display: flex;
@@ -371,8 +412,13 @@ header .icon {
     font-size: 20px;
 }
 
+#staff-section p {
+    width: 80%;
+}
+
 #staff-section img {
-    width: 8rem;
+    width: 7rem;
+    padding: 0.5rem;
 }
 
 /* EVENTS */
@@ -383,17 +429,48 @@ header .icon {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
-    height: 94vh;
+    justify-content: flex-start;
+    gap: 3rem;
     color: black;
-    margin-top: 3.5rem;
+    padding: 3rem 0;
+}
+
+#events-section .event-card hr {
+    width: 90%;
+    border: none;
+    height: 2px;
+    background-color: white;
+    align-self: center;
+}
+
+#events-section .food-pantry-card hr {
+    width: 90%;
+    border: none;
+    height: 2px;
+    background-color: black;
+    align-self: center;
+}
+
+#events-section h2 {
+    color: white;
+    font-size: 3rem;
 }
 
 #events-section>div {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    margin-left: 5vw;
+    justify-content: space-evenly;
+}
+
+#events-section h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 
 #events-section svg {
@@ -401,31 +478,70 @@ header .icon {
     color: var(--accent-color);
 }
 
-#events-section .food-pantry-card {
-    background-color: #ffffffDE;
-    width: max(32vw, 350px);
+#events-section .special-event-tag{
+    font-size: 0.85rem;
+    background-color:#dd9a0b;
+    width: 7rem;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+#events-section .weekly-event-tag{
+    color: white;
+    font-size: 0.85rem;
+    background-color:#418FDE;
+    width: 7rem;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+#events-section .event-card {
+    background-color: #fdb71ef2;
+    width: max(28vw, 350px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.25rem;
-    padding: 2.5rem 2rem;
-    margin-top: 2rem;
-    margin-right: 0.75rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 0.5rem;
+    color: rgb(255, 255, 255);
+    box-shadow: 1rem -0.75rem 0px #eda813d0;
+}
+
+.event-card h3 {
+    color: white;
+}
+
+#events-section .food-pantry-card h3 {
+    color: var(--primary-color);
+}
+
+#events-section .food-pantry-card {
+    background-color: #ffffffDE;
+    width: max(28vw, 350px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 2.5rem 1.5rem;
     border-radius: 0.5rem;
     color: black;
-    box-shadow: 1rem -0.75rem 0px #cdcdcdde;
+    box-shadow: 1rem -0.75rem 0px #cdcdcdce;
 }
 
 #events-section>div>div>div {
     line-height: 1.5;
 }
 
-#events-section h2 {
-    font-size: max(3.75vw, 32px);
+#events-section .food-pantry-card h3, .event-card h3 {
+    font-size: max(2.75vw, 28px);
 }
 
 #events-section p {
-    font-size: max(1.75vw, 18px);
+    width: 90%;
+    font-size: max(1.5vw, 18px);
 }
 
 .events-buttons {
@@ -434,15 +550,16 @@ header .icon {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0.25rem 0.5rem;
+    align-self: center;
 }
 
 .events-buttons button {
     background-color: #418FDE;
-    border: 2px solid #156fb0;
+    border: 2px solid #d6d6d6;
     padding: 0.5rem 1rem;
-    border-radius: 0.35rem;
+    border-radius: 8px;
     font-weight: bold;
-    font-size: max(1.65vw, 16px);
+    font-size: max(1.25vw, 16px);
     color: white;
     text-decoration: none;
 }
@@ -455,13 +572,13 @@ header .icon {
 
 #news-section {
     margin: auto;
-    width: 85vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     /* justify-content: ; */
     align-items: flex-start;
-    gap: 4rem;
-    padding: 4rem 0;
+    gap: 3rem;
+    padding: 3rem 0;
 }
 
 #news-section img {
@@ -475,7 +592,7 @@ header .icon {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     color: black;
     text-decoration: none;
 }
@@ -486,15 +603,15 @@ header .icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 #news-section h2 {
-    font-size: max(3.75vw, 32px);
+    font-size: max(3.5vw, 32px);
 }
 
 #news-section h3 {
-    font-size: max(2.25vw, 18px);
+    font-size: max(2vw, 18px);
 }
 
 #news-section h3:hover {
@@ -502,13 +619,13 @@ header .icon {
 }
 
 #news-section p {
-    font-size: max(1.70vw, 16px);
+    font-size: max(1.50vw, 16px);
 }
 
 #news-section .desc {
     /* height: 5rem; */
     overflow: hidden;
-    font-size: max(1.5vw, 15px);
+    font-size: max(1.25vw, 15px);
 }
 
 .community-sect h2 {
@@ -524,7 +641,7 @@ header .icon {
 }
 
 .community-sect h3 {
-    font-size: 1.5em;
+    font-size: 3rem;
     font-style: normal;
     text-align: center;
 }
@@ -570,7 +687,7 @@ header .icon {
 }
 
 .community {
-    height: 100vh;
+    height: 94vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
@@ -587,139 +704,11 @@ header .icon {
     height: auto;
 }
 
-#one {
-    grid-area: one;
-}
-
-#two {
-    grid-area: two;
-}
-
-#thr {
-    grid-area: thr;
-}
-
-#fou {
-    grid-area: fou;
-}
-
-#fiv {
-    grid-area: fiv;
-}
-
-#six {
-    grid-area: six;
-}
-
-#sev {
-    grid-area: sev;
-}
-
-#eit {
-    grid-area: eit;
-}
-
-/*Styling for things ONLY on food pantry page */
-.content {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-areas: "imgs text";
-}
-
-#text {
-    grid-area: text;
-    text-align: left;
-    font-size: 1.5em;
-    font-style: normal;
-    align-self: center;
-    padding: 2em;
-}
-
-.content img {
-    grid-area: imgs;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Styling for things ONLY on the Our Services page */
-/* Styling for things ONLY on the Our Services page */
-.sercontent {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.25fr 2fr 0.25fr 2fr;
-    grid-template-areas: "h h" "list1 list2" "h2 h2" "art1 art2";
-    padding: 3em;
-    margin-left: 2em;
-}
-
-#h {
-    grid-area: h;
-    text-align: center;
-    font-size: 2.5em;
-    font-style: normal;
-    align-self: center;
-}
-
-#h2 {
-    grid-area: h2;
-    text-align: center;
-    font-size: 2.5em;
-    font-style: normal;
-    align-self: center;
-}
-
-#list1 {
-    grid-area: list1;
-    font-size: 1.5em;
-    font-style: normal;
-    align-self: center;
-}
-
-#list2 {
-    grid-area: list2;
-    font-size: 1.5em;
-    font-style: normal;
-    align-self: left;
-}
-
-#art1 {
-    grid-area: art1;
-}
-
-#art2 {
-    grid-area: art2;
-}
-
-.evecontent {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-areas: "poster deets";
-}
-
-#deets {
-    grid-area: deets;
-    text-align: left;
-    font-size: 1.5em;
-    font-style: normal;
-    align-self: center;
-    padding: 2em;
-}
-
-#poster {
-    grid-area: poster;
-    max-width: 60%;
-    height: auto;
-}
 
 /* Styling for Donations Page */
 
 .donate-section {
-    margin-top: 5rem;
-    padding: 2rem;
+    padding: 3rem 0;
 }
 
 .donate-section  .donate-description{
@@ -757,7 +746,11 @@ header .icon {
     gap: 1.25rem;
     align-items: center;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem;
+}
+
+.resources-section h2 {
+    font-size: max(4vw, 24px);
 }
 
 .resources-section .resources-title {
@@ -788,11 +781,12 @@ header .icon {
 .resources-section ul.filter-buttons li button.all {
     background-color: var(--accent-color);
     border: 2px solid #e2a116;
-    color: black;
+    color: white;
 }
 
 .resources-section .filter-buttons .button-clicked {
     background-color: black !important;
+    border: 1px solid black !important;
 }
 
 .resources-section ul li {
@@ -801,7 +795,7 @@ header .icon {
 
 .resources-section li button {
     font-size: 1rem;
-    color: white;
+    color: white ;
     padding: 0.65rem 1rem;
     border-radius: 12px;
     border: 1px solid var(--primary-color);
@@ -827,7 +821,7 @@ header .icon {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 8%;
+    gap: 10%;
     border: 2px solid lightgrey;
     padding: 1rem 1.5rem;
     /* border-radius: 10px; */
@@ -868,6 +862,49 @@ header .icon {
     border-radius: 8px;
     font-size: 0.75rem;
     font-family: Helvetica, sans-serif;
+}
+
+.volunteer-section {
+    width: min(85vw, 30rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    margin: 3rem auto;
+    padding: 2rem 4rem;
+    border-radius: 6px;
+    background-color: #fafafa;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.501);
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.volunteer-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.volunteer-section form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.volunteer-section form input {
+    padding: 0.5rem;
+    width: 20rem;
+    border-radius: 6px;
+    border: 1px solid #d5d5d5;
+}
+
+.volunteer-section form button {
+    background-color: var(--accent-color);
+    color: black;
+    width: 10rem;
+    padding: 0.5rem 0;
+    border-radius: 6px;
+    border: 1px solid #d5d5d5;
 }
 
 /* Styling for the responsive (hamburger menu) view */
