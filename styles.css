@@ -13,7 +13,7 @@
 
 h3 {
     font-weight: bold;
-    font-size: max(4vw, 24px);
+    font-size: 3rem;
 }
 
 h2 {
@@ -26,6 +26,10 @@ p {
 
 label, input, button {
     font-family: Helvetica, sans-serif;
+}
+
+button:hover {
+    opacity: 0.75;
 }
 /* HEADER */
 
@@ -47,6 +51,7 @@ header{
     border-bottom: 4px solid #156fb0;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
     z-index: 100;
@@ -65,17 +70,18 @@ header{
 }
 
 .logo h1 {
-    width: 40vw;
+    width: 38vw;
     text-align: left;
 }
 
-nav {
+nav#nav-links {
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 1rem;
-    gap: 1.5rem;
+    display: block;
+    padding-right: 0rem;
+}
+
+nav#nav-links a {
+    margin: 0.3rem;
 }
 
 #donate-button {
@@ -83,6 +89,15 @@ nav {
     border-radius: 8px;
     color: rgb(40, 40, 40);
     padding: 8px 12px;
+}
+
+#donate-button-responsive {
+    display: none;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    color: rgb(40, 40, 40);
+    padding: 14px 34px;
+    font-weight: 600;
 }
 
 #donate-button:hover,
@@ -103,6 +118,76 @@ header a.active {
 /* Hide the link that should open and close the topnav on small screens */
 header .icon {
     display: none;
+    position: relative;
+}
+
+@media screen and (max-width: 900px){
+
+    header a, header h1 {
+        font-size: 0.85rem;
+    }
+
+    header .logo h1 {
+        width: 35vw;
+    }
+
+    nav {
+        font-size: 0.85rem;
+        gap: 1rem;
+    }
+
+    #donate-button {
+        padding: 6px 8px;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    header h1 {
+        display: none;
+    }
+}
+
+/* Styling for the responsive (hamburger menu) view */
+@media screen and (max-width: 500px) {
+    .logo img {
+        width: 4rem;
+    }
+
+    #donate-button-responsive {
+        display:block;
+    }
+
+    
+    header nav#nav-links {
+        display: none;
+        position: absolute;
+        top: 4.65rem;
+        right: 0;
+        padding-right: 0;
+    }
+    
+    
+    header nav#nav-links a {
+        margin: 0;
+        display: block;
+        padding: 1rem 0.5rem 1rem 4rem;
+        color: black;
+        text-align: right;
+        background: white;
+    }
+    
+    #nav-links #donate-button {
+        display: none;
+    }
+    /* Position the hamburger icon on the top right */
+    header button.icon {
+        background-color: transparent;
+        border: none;
+        width: 3rem;
+        display: block;
+    }
 }
 
 /* FOOTER */
@@ -143,7 +228,7 @@ header .icon {
     justify-content: space-around;
     align-items: flex-start;
     gap: 0.5rem;
-    word-break: break-all;
+    word-break:normal;
 }
 
 .footer-content a {
@@ -151,7 +236,7 @@ header .icon {
 }
 
 .footer-content>div {
-    width: max(15vw, 100px);
+    width: max(20%, 100px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,14 +279,67 @@ header .icon {
 }
 
 #footer .partners img {
-    height: max(9vw, 80px);
+    height: max(8vw, 100px);
     width: auto;
 }
 
 #footer img.salaam {
-    height: max(4vw,30px);
+    height: max(4vw,38px);
     width: auto;
     margin-left: 1rem;
+}
+
+@media screen and (max-width: 900px){
+    .footer-content {
+        width: 90vw;
+    }
+
+    .footer-content div p {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .footer-content {
+        flex-direction: column
+    }
+
+    #footer #logo {
+        width: 4.5rem;
+    }
+    .footer-content>div {
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+
+    .footer-content div p {
+        font-size: 0.75rem;
+    }
+
+    #footer svg {
+        display: none;
+    }
+
+    #footer .icons {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #footer .partners {
+        gap: 0.25rem;
+    }
+
+    #footer .partners img {
+        height: 4rem;
+    }
+
+    #footer img.salaam {
+        height: 1.75rem;
+    }
 }
 
 /* MISSION */
@@ -210,9 +348,9 @@ header .icon {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/menwomen.JPG");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    /* background-position: 0 0, 0 -525px; */
     color: white;
-    height: 95vh;
+    height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,14 +368,14 @@ header .icon {
 
 .hero-section h2 {
     color: white;
-    margin-top: 4rem;
-    font-size: max(4vw, 32px);
+    margin-top: 3rem;
+    font-size: max(4.5vw, 50px);
     width: 75vw;
     text-align: center;
 }
 
 .hero-section p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     justify-content: center;
 }
 
@@ -262,21 +400,58 @@ header .icon {
     cursor: pointer;
 }
 
+@media screen and (max-width: 900px){
+    .hero-section {
+        height: 25rem;
+        gap: 0.75rem;
+    }
+
+    .hero-section h2 {
+        margin-top: 1rem;
+        font-size: 2.25rem;
+    }
+
+    .hero-section p {
+        font-size: 1.5rem;
+    }
+
+    .hero-section button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .hero-section a.arrow {
+        width: 3.75rem;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .hero-section {
+        height: 32rem;
+    }
+
+    .hero-section h2 {
+        width: 90vw;
+    }
+}
+
 /* ABOUT US */
 
 #about-us-section {
+    margin: 0 auto;
+    width: 75%;
     color: black;
     text-align: left;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 1rem;
     padding: 3rem 0;
 }
 
 #about-us-section div {
-    width: max(40vw, 7rem);
+    width: 75%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -284,8 +459,8 @@ header .icon {
 
 #about-us-section img {
     object-fit: cover;
-    height: max(30vw, 5rem);
-    width: max(30vw, 5rem);
+    height: max(30vw,14rem);
+    width: max(30vw,14rem);
     border-radius: 60%;
     border: 8px solid var(--primary-color);
 }
@@ -296,12 +471,36 @@ header .icon {
 
 #about-us-section p {
     line-height: 1.5;
-    font-size: max(1.35vw, 14px);
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 900px){
+    #about-us-section {
+        flex-direction: column-reverse;
+    }
+
+    #about-us-section div {
+        width: 90%;
+    }
+
+    #about-us-section img {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    #about-us-section h3 {
+        font-size: 2.25rem;
+    }
+
+    #about-us-section p {
+        fontsize: 0.85rem;
+    }
 }
 
 /* SERVICES */
 
 #services-section {
+    width: 100vw;
     background-color: var(--primary-color);
     color: white;
     display: flex;
@@ -312,8 +511,12 @@ header .icon {
     padding: 3rem 0;
 }
 
+#services-section h3 {
+    font-size: 3rem;
+}
+
 #services-section div {
-    width: max(85%, 35rem);
+    width: min(85%, 75rem);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -344,7 +547,7 @@ header .icon {
     text-align: center;
     font-weight: bold;
     color: var(--primary-color);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     overflow-wrap: break-word;
 }
 
@@ -372,10 +575,44 @@ header .icon {
     color: var(--accent-color);
 }
 
+@media screen and (max-width: 900px){
+
+    #services-section h3 {
+        font-size: 2.25rem;
+    }
+
+    #services-section article{
+        width: 14rem;
+        gap: 0.5rem;
+        height: 19rem;
+        padding: 0 1rem;    
+    }
+
+    #services-section article h4 {
+        font-size: 1rem;
+    }
+
+    #services-section article li {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    #services-section svg {
+        display: none;
+    }
+
+    #services-section article{
+        height: 14rem;
+        width: 85%;
+    }
+}
+
 /* STAFF */
 
 #staff-section {
-    width: 95vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -388,17 +625,18 @@ header .icon {
 }
 
 #staff-section div {
-    width: min(90vw, 65rem);
+    width: min(85%, 55rem);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 2rem;
+    column-gap: 3rem;
 }
 
 #staff-section article {
-    width: max(18vw, 12rem);
+    width: 9rem;
     height: auto;
     text-align: center;
     display: flex;
@@ -409,21 +647,46 @@ header .icon {
 
 #staff-section h4 {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 #staff-section p {
     width: 80%;
+    font-size: 0.85rem;
 }
 
 #staff-section img {
-    width: 7rem;
+    width: 9rem;
     padding: 0.5rem;
+}
+
+@media screen and (max-width: 900px){
+    #staff-section div {
+        row-gap: 0.5rem;
+        column-gap: 1rem;
+    }
+
+    #staff-section img {
+        width: 7.5rem;
+    }
+
+    #staff-section h3 {
+        font-size: 2.25rem;
+    }
+
+    #staff-section h4 {
+        font-size: 1rem;
+    }
+
+    #staff-section p {
+        font-size: 0.85rem;
+    }
 }
 
 /* EVENTS */
 
 #events-section {
+    width: 100vw;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/food-pantry.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -445,7 +708,7 @@ header .icon {
     align-self: center;
 }
 
-#events-section .food-pantry-card hr {
+#events-section #food-pantry-card hr {
     width: 90%;
     border: none;
     height: 2px;
@@ -459,10 +722,12 @@ header .icon {
 }
 
 #events-section>div {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 #events-section h3 {
@@ -499,49 +764,95 @@ header .icon {
 
 #events-section .event-card {
     background-color: #fdb71ef2;
-    width: max(28vw, 350px);
+    width: max(30vw, 450px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.25rem;
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 0.5rem;
     color: rgb(255, 255, 255);
     box-shadow: 1rem -0.75rem 0px #eda813d0;
+}
+
+#events-section .event-card .special-description {
+    font-size: 0.9rem;
 }
 
 .event-card h3 {
     color: white;
 }
 
-#events-section .food-pantry-card h3 {
+#events-section #food-pantry-card h3 {
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: .9;
 }
 
-#events-section .food-pantry-card {
+#events-section #food-pantry-card {
     background-color: #ffffffDE;
-    width: max(28vw, 350px);
+    width: max(30vw, 450px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 0.25rem;
+    border-radius: 0.5rem;
+    color: black;
+    box-shadow: 1rem -0.75rem 0px #cdcdcdce;
+}
+
+#food-pantry-card > div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.25rem;
-    padding: 2.5rem 1.5rem;
-    border-radius: 0.5rem;
-    color: black;
-    box-shadow: 1rem -0.75rem 0px #cdcdcdce;
+}
+
+#events-section #food-pantry-card button#next-button, #events-section #food-pantry-card button#back-button {
+    background-color: transparent;
+    border: 0;
+    width: 3rem;
+    height: auto;
+}
+
+button#back-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+button#next-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#events-section button#next-button:hover, #events-section button#back-button:hover {
+    border: 0;
+    box-shadow: none;
+    opacity: 0.75;
+}
+
+#events-section #food-pantry-card button#next-button svg, #events-section button#back-button svg {
+    width: 2rem;
 }
 
 #events-section>div>div>div {
     line-height: 1.5;
 }
 
-#events-section .food-pantry-card h3, .event-card h3 {
-    font-size: max(2.75vw, 28px);
+#events-section #food-pantry-card h3, .event-card h3 {
+    font-size: 2.5rem;
 }
 
 #events-section p {
     width: 90%;
-    font-size: max(1.5vw, 18px);
+    font-size: 1.25rem;
 }
 
 .events-buttons {
@@ -556,16 +867,52 @@ header .icon {
 .events-buttons button {
     background-color: #418FDE;
     border: 2px solid #d6d6d6;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     border-radius: 8px;
     font-weight: bold;
-    font-size: max(1.25vw, 16px);
+    font-size: 0.85rem;;
     color: white;
     text-decoration: none;
 }
 
 #events-section button:hover {
     box-shadow: 2px 2px 0px black;
+}
+
+@media screen and (max-width: 900px){
+    #events-section .event-card, #events-section #food-pantry-card {
+        gap: 1rem;
+    }
+
+    #events-section h2 {
+        font-size: 2.25rem;
+    }
+
+    #events-section #food-pantry-card h3, .event-card h3 {
+        font-size: 2rem;
+    }
+
+    #events-section p {
+        font-size: 1rem;
+    }
+
+    #events-section .special-description{
+        font-size: 0.75rem;
+    }
+
+    #events-section .weekly-event-tag, #events-section .special-event-tag {
+        width: 5rem;
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    #events-section svg {
+        width: 2.75rem;
+    }
+
+    .events-buttons button {
+        font-size: 0.75rem;
+    }
 }
 
 /* NEWS */
@@ -627,6 +974,8 @@ header .icon {
     overflow: hidden;
     font-size: max(1.25vw, 15px);
 }
+
+/* Communnity Section */
 
 .community-sect h2 {
     position: absolute;
@@ -750,7 +1099,7 @@ header .icon {
 }
 
 .resources-section h2 {
-    font-size: max(4vw, 24px);
+    font-size: 3rem;
 }
 
 .resources-section .resources-title {
@@ -851,6 +1200,11 @@ header .icon {
     color: var(--primary-color);
 }
 
+.resources-title a{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
 .resources-list article a:hover {
     text-decoration: underline;
 }
@@ -862,6 +1216,52 @@ header .icon {
     border-radius: 8px;
     font-size: 0.75rem;
     font-family: Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 900px){
+    .resources-title a {
+        font-size: 0.85rem;
+    }
+
+    .resources-section .resources-title p {
+        width: 90%;
+        font-size: 0.85rem;
+    }
+
+    .resources-section {
+        width: 90%;
+        padding: 2rem 1rem;
+    }
+
+    .resources-section h2 {
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    .resources-section ul.filter-buttons {
+        gap: 0.5rem;
+    }
+
+    .resources-section li button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .resources-list article a {
+        font-size: 1rem;
+    }
+
+    .resources-list article p {
+        font-size: 0.75rem;
+    }
+
+    .resources-list article img {
+        width: 5rem;
+    }
+
+    .resources-list .resources-tags li{
+        font-size: 0.65rem;
+    }
 }
 
 .volunteer-section {
@@ -898,6 +1298,26 @@ header .icon {
     border: 1px solid #d5d5d5;
 }
 
+.volunteer-section .volunteer-checkbox input {
+    width: 1rem;
+}
+
+.volunteer-section .volunteer-interest-container .volunteer-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 10rem;
+    font-size: 0.85rem;
+}
+
+.volunteer-section .volunteer-interest-container .checkbox-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+}
+
 .volunteer-section form button {
     background-color: var(--accent-color);
     color: black;
@@ -907,42 +1327,45 @@ header .icon {
     border: 1px solid #d5d5d5;
 }
 
-/* Styling for the responsive (hamburger menu) view */
-@media screen and (max-width: 808px) {
-    header.responsive {
-        flex-direction: column;
-        /* Stack items vertically */
-        align-items: flex-end;
-        /* Align links to the right */
-        position: relative;
-    }
-
-    /* Position the hamburger icon on the top right */
-    header.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    /* Display links in a vertical layout */
-    header.responsive .right-align {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        /* Take full width of the container */
-        text-align: right;
-    }
-
-    /* Display each link as a block element for stacking */
-    header.responsive .right-align a {
-        float: none;
-        display: block;
-        width: 100%;
-        padding: 10px;
-        text-align: right;
-    }
-
-
-
-
+.volunteer-section h2 {
+    font-size: 2rem;
 }
+
+@media screen and (max-width: 900px){
+    .volunteer-section {
+        padding: 1.5rem 2rem;
+        width: min(85vw, 23rem);
+    }
+
+    .volunteer-section form {
+        gap: 0.75rem;
+    }
+
+    .checkbox-container {
+        justify-content: flex-start;
+    }
+
+    .volunteer-checkbox p {
+        font-size: 0.75rem;
+    }
+
+    .volunteer-section form input {
+        width: 100%;
+        padding: 0.35rem;
+        font-size: 0.75rem;
+    }
+
+    .volunteer-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .volunteer-section label {
+        font-size: 0.85rem;
+    }
+
+    .volunteer-section form button {
+        width: 7.5rem;
+    }
+}
+
+

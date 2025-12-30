@@ -25,4 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-console.log("is working");
+export const pantrySchedule = [
+    {position: 0, date: "2025-12-17", time: "10:30 AM", day: "Wednesday"},
+    {position: 1, date: "2025-12-18", time: "9:30 AM", day: "Thursday"},
+    {position: 2, date: "2025-12-19", time: "12:00 PM", day:"Friday"},
+    {position: 3, date: "2025-12-24", time: "CLOSED", day: "Wednesday"},
+    {position: 4, date: "2025-12-25", time: "CLOSED", day: "Thursday"},
+    {position: 5, date: "2025-12-26", time: "12:00 PM", day:"Friday"},
+    {position: 6, date: "2025-12-31", time: "10:30 AM", day: "Wednesday"},
+    {position: 7, date: "2026-01-01", time: "CLOSED", day: "Thursday"},
+    {position: 8, date: "2026-01-02", time: "12:00 PM", day:"Friday"},]
+
