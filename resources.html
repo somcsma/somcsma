@@ -428,42 +428,16 @@
                     button.classList.remove('button-clicked');
                 })
                 button.classList.add('button-clicked');
-                console.log("button clicked");
                 const selectedCategory = button.dataset.filter;
-                console.log(selectedCategory);
 
                 cards.forEach(card => {
                     if(selectedCategory == 'all' || card.dataset.filter === selectedCategory){
                         card.classList.remove('hidden');
-                        console.log("displaying...");
                     } else {
                         card.classList.add('hidden');
-                        console.log("hiding...");
                     }
                 })
             })
         })
     })
-
-    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
-
-<script>
-    function myFunction() {
-        var navLinks = document.getElementById("nav-links");
-        console.log(navLinks)
-        if (navLinks.style.display === "block") {
-            navLinks.style.display = "none";
-        } else {
-            navLinks.style.display = "block";
-        }
-    }
 </script>

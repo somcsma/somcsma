@@ -43,47 +43,10 @@
 
 <main role="main">
     <div class="volunteer-section">
-        <h2>Volunteer Signup</h2>
-        <form id="volunteer-form" action="https://volunteer-airtable-form.somcsma.workers.dev/submit" method="POST">
-            <div>
-                <label for="first_name">First Name <em>*</em></label>
-                <input id="first_name" name="first_name" type="text" placeholder="Enter your first name" required>
-            </div>
-            <div>
-                <label for="last_name">Last Name <em>*</em></label>
-                <input id="last_name" name="last_name" type="text" placeholder="Enter your last name" required>
-            </div>
-            <div>
-                <label for="email">Email <em>*</em></label>
-                <input name="email" id="email" type="email" placeholder="your.email@example.com" required>
-            </div>
-            <div>
-                <label for="phone">Phone Number <em>*</em></label>
-                <input name="phone" id="phone" type="tel" placeholder="(123) 456-789" required>
-            </div>
-            <div class="volunteer-interest-container">
-                <label>Areas of Interest <em>*</em></label>
-                <div class="checkbox-container">
-                    <div  class="volunteer-checkbox">
-                        <input id="outreach" type="checkbox" name="interest" value="outreach">
-                        <label for="outreach" >Outreach</label>
-                    </div>
-                    <div class="volunteer-checkbox">
-                        <input id="office" type="checkbox" name="interest" value="office_tasks">
-                        <label for="office" >Office Tasks</label>
-                    </div>
-                    <div class="volunteer-checkbox">
-                        <input id="education" type="checkbox" name="interest" value="education_program_support">
-                        <label for="education">Edu/Program Support</label>
-                    </div>
-                    <div class="volunteer-checkbox">
-                        <input id="foodPantry" type="checkbox" name="interest" value="food_pantry">
-                        <label for="foodPantry">Food Pantry</label>
-                    </div>
-                </div>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+        <svg class="success" fill="#418fde" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.308 492.308" xml:space="preserve" stroke="#418fde"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <polygon points="379.077,145.933 199.519,325.49 113.221,239.192 99.298,253.115 199.519,353.337 393,159.856 "></polygon> </g> </g> <g> <g> <path d="M246.154,0C110.423,0,0,110.423,0,246.154s110.423,246.154,246.154,246.154s246.154-110.423,246.154-246.154 S381.885,0,246.154,0z M246.154,472.615c-124.875,0-226.462-101.587-226.462-226.462S121.279,19.692,246.154,19.692 s226.462,101.587,226.462,226.462S371.029,472.615,246.154,472.615z"></path> </g> </g> </g></svg>
+        <h2 style="text-align:center;">Form submitted successfully!</h2>
+        <p style="text-align: center;">Thank you! We will reach out to you through email soon! If there are any related issues, please reach out directly to the following email <a href="mailto:bc_somaliselfmanagementagency@utah.edu" style="text-decoration: none; color:grey;">bc_somaliselfmanagementagency@utah.edu</a></p>
+        <a href="volunteer.html" style="align-self: center; text-decoration: none; color: white; padding: 0.75rem 1rem; background-color: #418fde; border-radius: 8px ;">Go back</a>
     </div>
 </main>
 
@@ -133,17 +96,6 @@
 </html>
 
 <script>
-    const form = document.getElementById('volunteer-form');
-
-    form.addEventListener('submit', function(event) {
-        const checkedBoxes = document.querySelectorAll('input[name="interest"]:checked');
-
-        if (checkedBoxes.length === 0) {
-        event.preventDefault(); 
-        
-        alert("Please select at least one interest!");
-        }
-    });
     
     function myFunction() {
         var navLinks = document.getElementById("nav-links");

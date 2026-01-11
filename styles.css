@@ -13,11 +13,24 @@
 
 h3 {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.25rem;
 }
 
 h2 {
     color: var(--primary-color);
+    font-size: 2.25rem;
+}
+
+@media screen and (max-width: 900px){
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    h2{
+        font-size: 1.5rem;
+    }
 }
 
 p {
@@ -37,7 +50,7 @@ header a,
 header h1 {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 header{
@@ -79,7 +92,7 @@ nav#nav-links {
 }
 
 nav#nav-links a {
-    margin: 0.3rem;
+    margin: 0.5rem;
 }
 
 #donate-button {
@@ -132,6 +145,10 @@ header .icon {
     nav {
         font-size: 0.85rem;
         gap: 1rem;
+    }
+
+    nav#nav-links a {
+        margin: 0.3rem;
     }
 
     #donate-button {
@@ -202,19 +219,19 @@ header .icon {
 
 #footer .footer-content img {
     align-self: center;
-    width: max(7vw, 60px);
+    width: max(5vw, 70px);
     height: auto;
     aspect-ratio: 135/110;
     margin-right: 1rem;
 }
 
 #footer svg {
-    width: 30px;
+    width: 35px;
     color: white;
 }
 
 .icons a {
-    width: 2vw;
+    width: 3vw;
 }
 
 .footer-content {
@@ -260,11 +277,6 @@ header .icon {
     gap: 1rem;
 }
 
-.footer-content .icons a {
-    font-size: max(3vw, 30px);
-    color: white;
-}
-
 #footer .partners {
     display: flex;
     flex-direction: row;
@@ -281,18 +293,18 @@ header .icon {
 }
 
 #footer .partners img {
-    height: max(8vw, 90px);
+    height: max(6vw, 80px);
     width: auto;
 }
 
 #footer .UFB img {
-    height: max(4vw, 38px);
+    height: max(2.5vw, 38px);
     width: auto;
     margin: 1rem;
 }
 
 #footer img.salaam {
-    height: max(4vw,38px);
+    height: max(2.5vw,38px);
     width: auto;
     margin-left: 1rem;
 }
@@ -314,6 +326,7 @@ header .icon {
 
     #footer #logo {
         width: 4.5rem;
+        margin-right: 0;
     }
     .footer-content>div {
         flex-direction: row;
@@ -368,12 +381,12 @@ header .icon {
 /* MISSION */
 
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/menwomen.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/menwomen.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: top;
     color: white;
-    height: 40rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -384,13 +397,13 @@ header .icon {
 .hero-section h2 {
     color: white;
     margin-top: 3rem;
-    font-size: max(4.5vw, 50px);
+    font-size: max(3.75vw, 45px);
     width: 75vw;
     text-align: center;
 }
 
 .hero-section p {
-    font-size: 2rem;
+    font-size: 1.75rem;
     justify-content: center;
 }
 
@@ -423,11 +436,11 @@ header .icon {
 
     .hero-section h2 {
         margin-top: 1rem;
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     .hero-section p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .hero-section button {
@@ -452,11 +465,11 @@ header .icon {
 
 @media screen and (max-width: 500px){
     .hero-section h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .hero-section p {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 }
 
@@ -484,8 +497,8 @@ header .icon {
 
 #about-us-section img {
     object-fit: cover;
-    height: max(30vw,14rem);
-    width: max(30vw,14rem);
+    height: max(25vw,14rem);
+    width: max(25vw,14rem);
     border-radius: 60%;
     border: 8px solid var(--primary-color);
 }
@@ -553,7 +566,7 @@ header .icon {
 }
 
 #services-section h3 {
-    font-size: 3rem;
+    font-size: 2.25rem;
 }
 
 #services-section div {
@@ -625,12 +638,12 @@ header .icon {
     #services-section article{
         width: 14rem;
         gap: 0.5rem;
-        height: 19rem;
+        height: 20rem;
         padding: 0 1rem;    
     }
 
     #services-section article h4 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     #services-section article li {
@@ -645,7 +658,7 @@ header .icon {
     }
 
     #services-section article{
-        height: 14rem;
+        height: 15rem;
         width: 85%;
     }
 }
@@ -655,9 +668,18 @@ header .icon {
         font-size: 1.75rem;
     }
 
+    #services-section article h4 {
+        font-size: 1.15rem;
+    }
+
+    #services-section article p {
+        font-size: 0.85rem;
+    }
+
     #services-section article {
         width: 95%;
-        height: 15rem;
+        height: auto;
+        padding: 1.25rem 1rem;
     }
 }
 
@@ -708,7 +730,8 @@ header .icon {
 }
 
 #staff-section img {
-    width: 9rem;
+    width: 8rem;
+    height: 8rem;
     padding: 0.5rem;
 }
 
@@ -741,6 +764,14 @@ header .icon {
         font-size: 1.75rem;
     }
 
+    #staff-section h4 {
+        font-size: 0.85rem;
+    }
+
+    #staff-section p {
+        font-size: 0.75rem;
+    }
+
     #staff-section div {
         width: 95%;
         column-gap: 0;
@@ -753,8 +784,8 @@ header .icon {
     }
 
     #staff-section img {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
     }
 }
 
@@ -793,7 +824,6 @@ header .icon {
 
 #events-section h2 {
     color: white;
-    font-size: 3rem;
 }
 
 #events-section>div {
@@ -922,12 +952,12 @@ button#next-button {
 }
 
 #events-section #food-pantry-card h3, .event-card h3 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
 }
 
 #events-section p {
     width: 90%;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 .events-buttons {
@@ -964,11 +994,11 @@ button#next-button {
     }
 
     #events-section h2 {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     #events-section #food-pantry-card h3, .event-card h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #events-section p {
@@ -1006,10 +1036,6 @@ button#next-button {
 
     #events-section .event-card h3, #events-section #food-pantry-card h3 {
         font-size: 1.5rem;
-    }
-
-    #events-section h3 svg {
-        display: none;
     }
 
     .events-buttons .normal-buttons {
@@ -1086,7 +1112,7 @@ button#next-button {
 }
 
 #news-section h2 {
-    font-size: max(3.5vw, 32px);
+    font-size: 2.25rem;
 }
 
 #news-section h3 {
@@ -1115,7 +1141,7 @@ button#next-button {
     }
     #news-section a {
         gap: .75rem;
-        height: 350px;
+        height: 375px;
         flex-direction: column;
         overflow: hidden;
         justify-content: flex-start;
@@ -1141,7 +1167,6 @@ button#next-button {
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
-    font-size: max(4.5vw, 42px);
     color: white;
 }
 
@@ -1220,7 +1245,7 @@ button#next-button {
 .donate-section  .donate-description{
     margin: 0 auto;
     padding-bottom: 2rem;
-    width: 60%;
+    width: min(80%, 40rem);
     text-align: center;
     font-size: 1.25rem;
 }
@@ -1228,12 +1253,16 @@ button#next-button {
 .donate-section h2 {
     padding-bottom: 1.25rem;
     color: var(--primary-color);
-    font-size: 3rem;
     text-align: center;
+    font-size: 2.25rem;
+}
+
+.donate-section p {
+    font-size: 1.25rem;
 }
 
 .donate-section .donate-additional {
-    width: 45%;
+    width: min(75%, 25rem);
     text-align: center;
     margin: 0 auto;
     padding-top: 1.25rem;
@@ -1243,7 +1272,11 @@ button#next-button {
 
 @media screen and (max-width: 900px) {
     .donate-section h2 {
-        font-size: 2.25rem;
+        font-size: 2rem;
+    }
+
+    .donate-section p {
+        font-size: 1rem;
     }
 }
 
@@ -1260,7 +1293,7 @@ button#next-button {
     }
 
     .donate-section p {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 
     .donate-section .donate-additional {
@@ -1282,10 +1315,6 @@ button#next-button {
     align-items: center;
     margin: 0 auto;
     padding: 3rem;
-}
-
-.resources-section h2 {
-    font-size: 3rem;
 }
 
 .resources-section .resources-title {
@@ -1550,8 +1579,9 @@ button#next-button {
     border: 1px solid #d5d5d5;
 }
 
-.volunteer-section h2 {
-    font-size: 2rem;
+.volunteer-section .success{
+    align-self: center;
+    width: 15rem;
 }
 
 @media screen and (max-width: 900px){
