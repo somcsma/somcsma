@@ -1,0 +1,18 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "volunteer-airtable-form",
+	"main": "src/index.js",
+	"compatibility_date": "2025-09-27",
+	"vars": {
+		"AIRTABLE_BASE_ID": "appc7n6FQWXubnjxJ",
+		"AIRTABLE_TABLE_NAME": "Form Submissions",
+	},
+	"observability": {
+		"logs": {
+			"enabled": true,
+			"head_sampling_rate": 1,
+			"invocation_logs": true,
+			"persist": true
+		}
+	}
+}

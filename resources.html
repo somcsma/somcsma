@@ -6,43 +6,42 @@
     rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SCSMA</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="/images/Somalia_coat_of_arms.png"
-    alt="Somalia logo for Somali Community Self-Management Center">
-<!-- boxicons link -->
-<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="description" content="SOMCSMA seeks to connect community members with community resources. Many free resources are available, and a list (in addition to a printable doc) has been provided on this page.">
+<title>SCSMA | Salt Lake City, Utah</title>
+<link rel="stylesheet" href="styles.min.css">
+<link rel="icon" type="image/webp" href="/images/Somalia_coat_of_arms.webp">
+<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N8HBMRJJ');</script>
+<!-- End Google Tag Manager -->
 
-
-<header>
+<header role="banner">
     <div class="logo">
-        <a href="index.html"><img src="images/Somalia_coat_of_arms.png"
-                al="logo for Somali Community Self Management Center" width="75em"></a>
+        <a href="index.html"><img src="images/Somalia_coat_of_arms.webp" aria-label="Somali Community Self-Management Agency - Home"
+                alt="logo for Somali Community Self Management Center" width="150" height="110"></a>
         <h1><a href="index.html" id="somcsma">Somali Community Self-Management Agency</a></h1>
     </div>
 
-    
+    <a href="donations.html" id="donate-button-responsive">Donate</a>
     <!-- Separate container for links that are aligned to the right of the screen -->
-    <nav>
-        <a href="events.html">Events</a>
+    <nav id="nav-links" role="navigation">
+        <a href="events.html" aria-label="Somali Community Self-Management Agency - Events">Events</a>
         <!-- <a href="services.html"></a> -->
-        <a href="resources.html">Community</a>
+        <a href="resources.html" aria-label="Somali Community Self-Management Agency - Resources">Resources</a>
         <!-- <a href="events.html">EVENTS</a> -->
-        <a href="volunteer.html">Volunteer</a>
-        <a href="donations.html" id="donate-button">Donate</a>
+        <a href="volunteer.html" aria-label="Somali Community Self-Management Agency - Volunteer">Volunteer</a>
+        <a href="donations.html" id="donate-button" aria-label="Somali Community Self-Management Agency - Make aDonate">Donate</a>
     </nav>
 
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
+    <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>    
+    </button>
 </header>
 
-<main>
+<main role="main">
 
     <!-- <section class="community-sect">
         <div>
@@ -78,7 +77,7 @@
         </ul>
         <div class="resources-list">
             <article data-filter="imm" class="card">
-                <img src="images/unp.png">
+                <img src="images/UNP.webp" alt="UNP Hartland Partnership Center logo">
                 <div>
                     <a href="https://www.partners.utah.edu/about-unp/hartland-partnership-center/" target="_blank">UNP
                         Hartland Partnership
@@ -95,7 +94,7 @@
                 </ul>
             </article>
             <article data-filter="imm" class="card">
-                <img src="images/CCS_Logo_full-color - Edited.png">
+                <img src="images/CCS_Logo_full-color - Edited.webp" alt="Catholic Community Services logo">
                 <div>
                     <a href="https://www.ccsutah.org/" target="_blank"> Catholic Community Services (CCS)</a><br>
                     <p>224 North 2200 West</p>
@@ -110,7 +109,7 @@
                 </ul>
             </article>
             <article data-filter="legal" class="card">
-                <img src="/images/LAS-removebg-preview.png">
+                <img src="/images/LAS-removebg-preview.webp" alt="Legal Aid Society of Salt Lake logo">
                 <div>
                     <a href="https://www.legalaidsocietyofsaltlake.org/" target="_blank"> Legal Aid Society of Salt
                         Lake</a>
@@ -125,7 +124,7 @@
                 </ul>
             </article>
             <article data-filter="edu" class="card">
-                <img src="/images/d75ca536-c2ff-4a6c-a344-32a4eb5c545f.png">
+                <img src="/images/d75ca536-c2ff-4a6c-a344-32a4eb5c545f.webp" alt="Asian Association of Utah logo">
                 <div>
                     <a href="https://aau-slc.org/" target="_blank"> Asian Association of Utah</a>
                     <p>155 South 300 West</p>
@@ -140,7 +139,7 @@
                 </ul>
             </article>
             <article data-filter="edu" class="card">
-                <img src="/images/e4794acf-4a46-476b-8a50-ca11307ee734.jpg">
+                <img src="/images/eslc_logo-removebg-preview.webp" alt="English Skills Learning Center logo">
                 <div>
                     <a href="https://www.eslcenter.org/" target="_blank"> English Skills Learning Center</a>
                     <p>1270 W 2320 S, Suite F</p>
@@ -154,7 +153,7 @@
                 </ul>
             </article>
             <article data-filter="edu" class="card">
-                <img src="images/Guadalupe_HorizontalLogo-1024x264 - Edited.png">
+                <img src="images/Guadalupe_HorizontalLogo-1024x264 - Edited.webp" alt="Guadalupe school logo"> 
                 <div>
                     <a href="https://guadschool.org/" target="_blank"> Guadalupe School</a>
                     <p>1385 North 1200 West</p>
@@ -168,7 +167,7 @@
                 </ul>
             </article>
             <article data-filter="edu" class="card">
-                <img src="images/Placeholder_view_vector.svg.png">
+                <img src="images/Placeholder_view_vector.svg.webp" alt="placeholder logo image">
                 <div>
                     <a href="https://www.slcschools.org/schools/glendale-mountain-view-community-learning-center"
                         target="_blank"> Glendale
@@ -184,7 +183,7 @@
                 </ul>
             </article>
             <article data-filter="edu train" class="card">
-                <img src="/images/images-removebg-preview.png">
+                <img src="/images/images-removebg-preview.webp" alt="Utah Community Action logo">
                 <div>
                     <a href="https://www.utahca.org/" target="_blank"> Utah Community Action</a>
                     <p>1307 S 900 West</p>
@@ -199,7 +198,7 @@
                 </ul>
             </article>
             <article data-filter="train" class="card">
-                <img src="/images/dowfs.png">
+                <img src="/images/dowfs.webp" alt="Utah Department of Workforce services logo">
                 <div>
                     <a href="https://jobs.utah.gov/" target="_blank"> Utah Department of Workforce Services</a>
                     <p>Multiple locations, use website to find nearest one!</p>
@@ -212,7 +211,7 @@
                 </ul>
             </article>
             <article data-filter="train" class="card">
-                <img src="/images/easterseals.png">
+                <img src="/images/easterseals.webp" alt="Easterseals employment training logo">
                 <div>
                     <a href="https://www.esgw.org/scsep/" target="_blank"> Easterseals Employment Training</a>
                     <p>720 S 200 E</p>
@@ -226,7 +225,7 @@
                 </ul>
             </article>
             <article data-filter="train" class="card">
-                <img src="/images/US-JobCorps-Logo.svg.png">
+                <img src="/images/US-JobCorps-Logo.svg.webp" alt="Job Corps logo">
                 <div>
                     <a href="https://www.jobcorps.gov/" target="_blank"> Job Corps</a>
                     <p>Multiple locations, check website to find nearest one!</p>
@@ -239,7 +238,7 @@
                 </ul>
             </article>
             <article data-filter="food" class="card">
-                <img src="/images/1d8db8f3-90d9-4df2-9206-667289e193af_thumb.png">
+                <img src="/images/1d8db8f3-90d9-4df2-9206-667289e193af_thumb.webp" alt="Utah food bank logo">
                 <div>
                     <a href="https://www.utahfoodbank.org/find-a-pantry/" target="_blank"> Utah Food Bank </a>
                     <p>Multiple locations, check website to find nearest one!</p>
@@ -251,7 +250,7 @@
                 </ul>
             </article>
             <article data-filter="food" class="card">
-                <img src="/images/CUC.png">
+                <img src="/images/CUC.webp" alt="Crossroads Urban Center logo">
                 <div>
                     <a href="https://www.crossroadsurbancenter.org/food.html" target="_blank"> Crossroads Urban Center
                     </a>
@@ -265,7 +264,7 @@
                 </ul>
             </article>
             <article data-filter="health" class="card">
-                <img src="/images/Placeholder_view_vector.svg.png">
+                <img src="/images/Placeholder_view_vector.svg.webp" alt="Placeholder logo image">
                 <div>
                     <a href="https://dhhs.utah.gov/health-clinics-of-utah/" target="_blank"> Rose Park Primary Care
                         Clinic</a><br>
@@ -279,7 +278,7 @@
                 </ul>
             </article>
             <article data-filter="health" class="card">
-                <img src="/images/saltlakecounty.png.png">
+                <img src="/images/saltlakecounty.png.webp" alt="Salt Lake County logo">
                 <div>
                     <a href="https://www.saltlakecounty.gov/health/locations/" target="_blank"> Salt Lake County Health
                         Clinics</a>
@@ -293,7 +292,7 @@
                 </ul>
             </article>
             <article data-filter="health" class="card">
-                <img src="/images/maliheh.png">
+                <img src="/images/maliheh.webp" alt="Maliheh Free Clinic logo">
                 <div>
                     <a href="https://malihehfreeclinic.org/" target="_blank">Maliheh Free Clinic</a>
                     <p>941 East 3300 South</p>
@@ -306,7 +305,7 @@
                 </ul>
             </article>
             <article data-filter="health" class="card">
-                <img src="/images/d11218f0-572f-486f-b9e2-9e3ecefa2a36-removebg-preview.png" >
+                <img src="/images/d11218f0-572f-486f-b9e2-9e3ecefa2a36-removebg-preview.webp" alt="Utah Hope Clinic logo">
                 <div>
                 <a href="https://www.utahhopeclinic.org/" target="_blank">Utah Hope Clinic</a>
                     <p>65 East 6850 South</p>
@@ -319,7 +318,7 @@
                 </ul>
             </article>
             <article data-filter="health" class="card">
-                <img src="/images/1920_fsc_circle-190760.png">
+                <img src="/images/1920_fsc_circle-190760.webp" alt="Fourth Street Clinic logo">
                 <div>
                     <a href="https://fourthstreetclinic.org/history/" target="_blank">Fourth Street Clinic</a>
                     <p>409 West 400 South</p>
@@ -333,7 +332,7 @@
                 </ul>
             </article>
             <article data-filter="health" class="card">
-                <img src="/images/CHIP-logo-removebg-preview.png">
+                <img src="/images/CHIP-logo-removebg-preview.webp" alt="Children's Health Insurance logo">
                 <div>
                     <a href="https://chip.utah.gov/state-chip/" target="_blank"> CHIP Children's Health Insurance</a>
                     <p>195 North 1950 West</p>
@@ -346,7 +345,7 @@
                 </ul>
             </article>
             <article data-filter="health" class="card">
-                <img src="/images/new-DHHS-logo-1-300x177.png">
+                <img src="/images/new-DHHS-logo-1-300x177.webp" alt="UHHS logo">
                 <div>
                     <a href="https://medicaid.utah.gov/" target="_blank"> Medicaid</a><br>
                     <p>288 North 1460 West</p>
@@ -362,21 +361,21 @@
     </section>
 </main>
 
-<footer id="footer">
+<footer id="footer" role="contentinfo">
     <div class="footer-content">
-        <img src="images/Somalia_coat_of_arms.png" alt="Somalia crest logo" id="logo" width="300em" />
+        <img src="images/Somalia_coat_of_arms.webp" alt="Somalia crest logo" id="logo" width="135" height="110" />
         <div>
-            <a href="https://share.google/uKXdjCz84PHox9PxE" target="_blank">
+            <a href="https://share.google/uKXdjCz84PHox9PxE" target="_blank" aria-label="Visit SOMCSMA using the address">
                 <svg viewBox="-2.16 -2.16 28.32 28.32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=fill"> <g id="location"> <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M8.89129 21.0787L8.9461 21.1315L8.95039 21.1357C9.95462 22.098 10.9283 22.7576 12.0296 22.7449C13.1259 22.7323 14.0956 22.0555 15.0992 21.0783C16.4747 19.7455 18.2545 17.9477 19.5403 15.8149C20.831 13.6741 21.6639 11.1292 21.0372 8.33595C18.9197 -1.10413 5.09133 -1.11519 2.96276 8.32592C2.35382 11.04 3.12314 13.5227 4.34999 15.6268C5.57222 17.7231 7.2824 19.5029 8.65394 20.8471C8.73386 20.9254 8.81273 21.0023 8.89035 21.0778L8.89129 21.0787ZM12 6.25012C10.2051 6.25012 8.75 7.7052 8.75 9.50012C8.75 11.295 10.2051 12.7501 12 12.7501C13.7949 12.7501 15.25 11.295 15.25 9.50012C15.25 7.7052 13.7949 6.25012 12 6.25012Z" fill="#ffffff"></path> </g> </g> </g></svg>            </a>
-            <a href="https://share.google/uKXdjCz84PHox9PxE" target="_blank">
+            <a href="https://share.google/uKXdjCz84PHox9PxE" target="_blank" aria-label="Visit SOMCSMA through the address">
                 <p>1151 S Redwood Rd Unit 102, Salt Lake City, UT 84104</p>
             </a>
         </div>
         <div>
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" fill="#ffffff"></path> </g></svg>
-            <p><a href="tel:801-487-0822">Phone: (801)487-0822</a></p>
-            <p><a href="tel:385-261-2722">Fax: (385)261-2722</a></p>
-            <p><a href="mailto:somcsma@yahoo.com">Email: somcsma@yahoo.com</a></p>
+            <p><a href="tel:801-487-0822" aria-label="Call SOMCSMA using our phone number">Phone: (801) 487-0822</a></p>
+            <p><a href="tel:385-261-2722" aria-label="Call SOMCSMA using our fax number">Fax: (385) 261-2722</a></p>
+            <p><a href="mailto:somcsma@yahoo.com" style="word-break: break-all;" aria-label="Contact SOMCSMA through our email">Email: somcsma@yahoo.com</a></p>
         </div>
         <div>
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM13 6.5C13 5.94772 12.5523 5.5 12 5.5C11.4477 5.5 11 5.94772 11 6.5V11.75C11 12.4404 11.5596 13 12.25 13H15.5C16.0523 13 16.5 12.5523 16.5 12C16.5 11.4477 16.0523 11 15.5 11H13V6.5Z" fill="#ffffff"></path> </g></svg>
@@ -384,43 +383,61 @@
             <p>Open 7 Days a Week</p>
         </div>
         <div class="icons">
-            <a href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank"><i
-                    class='bx bxl-facebook-circle'></i></a>
-            <a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"><i
-                    class='bx bxl-instagram'></i></a>
-            <a href="https://www.linkedin.com/in/abdirizak-ibrahim-a9a162140/" target="_blank"><i
-                    class='bx bxl-linkedin-square'></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank" aria-label="Follow SOMCSMA and get updates on Facebook"><svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"></path> </g></svg></a>
+            <a href="https://www.instagram.com/somcsma/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank" aria-label="Follow our Instagram profile"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <path d="m0 0h32v32h-32z"></path> <path d="m17.0830929.03277248c8.1190907 0 14.7619831 6.64289236 14.7619831 14.76198302v2.3064326c0 8.1190906-6.6429288 14.761983-14.7619831 14.761983h-2.3064325c-8.11909069 0-14.76198306-6.6428924-14.76198306-14.761983v-2.3064326c0-8.11909066 6.64289237-14.76198302 14.76198306-14.76198302zm-.8630324 8.0002641-.2053832-.0002641c-1.7102378 0-3.4204757.05652851-3.4204757.05652851-2.4979736 0-4.52299562 2.02501761-4.52299562 4.52298561 0 0-.05191606 1.4685349-.05624239 3.0447858l-.00028625.2060969c0 1.7648596.05652864 3.590089.05652864 3.5900891 0 2.497968 2.02502202 4.5229856 4.52299562 4.5229856 0 0 1.5990132.0565285 3.2508899.0565285 1.7648634 0 3.6466255-.0565285 3.6466255-.0565285 2.4979736 0 4.4664317-1.9684539 4.4664317-4.4664219 0 0 .0565286-1.8046833.0565286-3.5335605l-.0010281-.4057303c-.0076601-1.5511586-.0555357-3.0148084-.0555357-3.0148084 0-2.4979681-1.9684582-4.46642191-4.4664317-4.46642191 0 0-1.6282521-.05209668-3.2716213-.05626441zm-.2053831 1.43969747c1.4024317 0 3.2005639.04637875 3.2005638.04637875 2.0483524 0 3.3130573 1.2647021 3.3130573 3.31305 0 0 .0463789 1.7674322.0463789 3.1541781 0 1.4176885-.0463789 3.2469355-.0463789 3.2469355 0 2.048348-1.2647049 3.31305-3.3130573 3.31305 0 0-1.5901757.0389711-2.9699093.0454662l-.3697206.0009126c-1.3545375 0-3.0049692-.0463788-3.0049692-.0463788-2.0483172 0-3.36958592-1.321301-3.36958592-3.3695785 0 0-.04637885-1.8359078-.04637885-3.2830941 0-1.3545344.04637885-3.061491.04637885-3.061491 0-2.0483479 1.32130402-3.31305 3.36958592-3.31305 0 0 1.7416035-.04637875 3.1440353-.04637875zm-.0000353 2.46195055c-2.2632951 0-4.0980441 1.8347448-4.0980441 4.098035s1.8347489 4.098035 4.0980441 4.098035 4.0980441-1.8347448 4.0980441-4.098035c0-2.2632901-1.8347489-4.098035-4.0980441-4.098035zm0 1.4313625c1.4727754 0 2.6666784 1.1939004 2.6666784 2.6666725s-1.193903 2.6666726-2.6666784 2.6666726c-1.4727401 0-2.6666784-1.1939005-2.6666784-2.6666726s1.1939031-2.6666725 2.6666784-2.6666725zm4.2941322-2.5685935c-.5468547 0-.9902027.4455321-.9902027.9950991 0 .5495671.443348.9950639.9902027.9950639.5468546 0 .9901674-.4454968.9901674-.9950639 0-.5496023-.4433128-.9950991-.9901674-.9950991z" fill="#ffffff" fill-rule="nonzero"></path> </g> </g></svg></a>
+            <a href="https://www.linkedin.com/in/abdirizak-ibrahim-a9a162140/" target="_blank" aria-label="Connect with us on LinkedIn"><svg fill="#ffffff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973 0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355-.537 0-.856.371-.997.728-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01 1.279 0 2.238.857 2.238 2.699v3.699z"></path></g></svg></a>
         </div>
     </div>
     <hr class="footer-bar">
     <div class="partners">
-        <a href="https://www.partners.utah.edu/" target="_blank">
-            <img src="images/unp_logo.png" alt="University Neighborhood Partners logo" />
+        <a href="https://www.partners.utah.edu/" target="_blank" aria-label="Visit University Neighborhood Partner's website">
+            <img src="images/unp_logo.webp" alt="University Neighborhood Partners logo" width="114" height="114" />
         </a>
-        <a href="">
-            <img class="salaam" src="images/salaam_logo.png" alt="SALAAM logo" />
+        <a href="" aria-label="Salaam's website link is to be added...">
+            <img class="salaam" src="images/salaam_logo.webp" alt="SALAAM logo" width="180" height="54" />
         </a>
-        <a href="https://www.utahfoodbank.org/" target="_blank">
-            <img src="images/utahfb_logo.png" alt="Utah Food Bank logo" />
+        <a class="UFB" href="https://www.utahfoodbank.org/" target="_blank" aria-label="Visit Utah Food Bank's website">
+            <img src="images/UFB_logo.webp" alt="Utah Food Bank logo" width="121" height="65" />
         </a>
-        <a href="https://dhhs.utah.gov/" target="_blank">
-            <img src="images/utahhhs_logo.png" alt="UtahHHS logo" />
+        <a href="https://dhhs.utah.gov/" target="_blank" aria-label="Visit Utah Health & Human Services' website">
+            <img src="images/utahhhs_logo.webp" alt="UtahHHS logo" width="114" height="114"/>
         </a>
     </div>
 </footer>
 
 </html>
 
-<script>
-    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+<script type="module">
     function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
+        var navLinks = document.getElementById("nav-links");
+        console.log(navLinks)
+        if (navLinks.style.display === "block") {
+            navLinks.style.display = "none";
         } else {
-            x.className = "topnav";
+            navLinks.style.display = "block";
         }
     }
-</script>
 
-<script src="main.js"></script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const resourceButtons = document.querySelectorAll(".filter-button");
+        const cards = document.querySelectorAll('.card');
+
+        resourceButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                resourceButtons.forEach(button => {
+                    button.classList.remove('button-clicked');
+                })
+                button.classList.add('button-clicked');
+                const selectedCategory = button.dataset.filter;
+
+                cards.forEach(card => {
+                    if(selectedCategory == 'all' || card.dataset.filter === selectedCategory){
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                })
+            })
+        })
+    })
+</script>

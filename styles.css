@@ -13,11 +13,24 @@
 
 h3 {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.25rem;
 }
 
 h2 {
     color: var(--primary-color);
+    font-size: 2.25rem;
+}
+
+@media screen and (max-width: 900px){
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    h2{
+        font-size: 1.5rem;
+    }
 }
 
 p {
@@ -33,22 +46,18 @@ button:hover {
 }
 /* HEADER */
 
-/* header {
-    font-family: "Sawarabi Mincho", cursive;
-} */
-
 header a,
 header h1 {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 header{
     position: sticky;
     top: 0;
     background-color: var(--primary-color);
-    border-bottom: 4px solid #156fb0;
+    border-bottom: 4px solid #3373b3d6;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,7 +75,9 @@ header{
 }
 
 .logo img {
-    width: 2.5rem;
+    width: 3rem;
+    height: auto;
+    aspect-ratio: 135/110;
 }
 
 .logo h1 {
@@ -81,7 +92,7 @@ nav#nav-links {
 }
 
 nav#nav-links a {
-    margin: 0.3rem;
+    margin: 0.5rem;
 }
 
 #donate-button {
@@ -96,7 +107,7 @@ nav#nav-links a {
     background-color: var(--accent-color);
     border-radius: 8px;
     color: rgb(40, 40, 40);
-    padding: 14px 34px;
+    padding: 10px 24px;
     font-weight: 600;
 }
 
@@ -136,6 +147,10 @@ header .icon {
         gap: 1rem;
     }
 
+    nav#nav-links a {
+        margin: 0.3rem;
+    }
+
     #donate-button {
         padding: 6px 8px;
         border-radius: 6px;
@@ -143,7 +158,6 @@ header .icon {
 }
 
 @media screen and (max-width: 700px){
-
     header h1 {
         display: none;
     }
@@ -151,8 +165,8 @@ header .icon {
 
 /* Styling for the responsive (hamburger menu) view */
 @media screen and (max-width: 500px) {
-    .logo img {
-        width: 4rem;
+    header {
+        padding: 0.25rem;
     }
 
     #donate-button-responsive {
@@ -163,7 +177,7 @@ header .icon {
     header nav#nav-links {
         display: none;
         position: absolute;
-        top: 4.65rem;
+        top: 67.87px;
         right: 0;
         padding-right: 0;
     }
@@ -185,7 +199,7 @@ header .icon {
     header button.icon {
         background-color: transparent;
         border: none;
-        width: 3rem;
+        width: 2.5rem;
         display: block;
     }
 }
@@ -199,30 +213,31 @@ header .icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 2rem 0 0.5rem 0;
+    gap: 0.5rem;
+    padding: 1rem 0 0.5rem 0;
 }
 
 #footer .footer-content img {
     align-self: center;
-    width: max(10vw, 60px);
+    width: max(5vw, 70px);
+    height: auto;
+    aspect-ratio: 135/110;
     margin-right: 1rem;
 }
 
 #footer svg {
-    width: max(3vw, 30px) ;
+    width: 35px;
     color: white;
-    margin-bottom: 1rem;
 }
 
 .icons a {
-    width: 2vw;
+    width: 3vw;
 }
 
 .footer-content {
     text-align: left;
     height: auto;
-    width: 75vw;
+    width: max(55vw, 700px);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -236,10 +251,11 @@ header .icon {
 }
 
 .footer-content>div {
-    width: max(20%, 100px);
+    width: max(22%, 110px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.35rem;
 }
 
 .footer-content a {
@@ -253,14 +269,12 @@ header .icon {
 }
 
 .footer-content .icons {
-    display: block;
+    display: flex;
+    flex-direction: row;
     align-self: center;
-}
-
-.footer-content .icons a {
-    font-size: max(3vw, 30px);
-    color: white;
-    margin-right: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 
 #footer .partners {
@@ -279,12 +293,18 @@ header .icon {
 }
 
 #footer .partners img {
-    height: max(8vw, 100px);
+    height: max(6vw, 80px);
     width: auto;
 }
 
+#footer .UFB img {
+    height: max(2.5vw, 38px);
+    width: auto;
+    margin: 1rem;
+}
+
 #footer img.salaam {
-    height: max(4vw,38px);
+    height: max(2.5vw,38px);
     width: auto;
     margin-left: 1rem;
 }
@@ -306,6 +326,7 @@ header .icon {
 
     #footer #logo {
         width: 4.5rem;
+        margin-right: 0;
     }
     .footer-content>div {
         flex-direction: row;
@@ -319,13 +340,17 @@ header .icon {
         font-size: 0.75rem;
     }
 
-    #footer svg {
+    #footer .footer-content svg {
         display: none;
     }
 
-    #footer .icons {
+    #footer .footer-content div.icons svg{
         display: flex;
+    }
+
+    #footer .icons {
         justify-content: center;
+        gap: 1.5rem;
     }
 
 
@@ -337,20 +362,31 @@ header .icon {
         height: 4rem;
     }
 
-    #footer img.salaam {
+    #footer img.salaam, #footer .UFB img {
         height: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #footer .footer-content img {
+        margin-right: 0;
+    }
+    
+    .footer-content div p {
+        text-align: center;
+        font-size: 0.35rem;
     }
 }
 
 /* MISSION */
 
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/menwomen.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/menwomen.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: 0 0, 0 -525px; */
+    background-size:cover;
+    background-position: top;
     color: white;
-    height: 40rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -358,24 +394,16 @@ header .icon {
     gap: 1rem;
 }
 
-.hero-section>p:nth-child(odd) {
-    font-size: 1.5em;
-    justify-content: center;
-    text-align: center;
-    padding-top: 1.5em;
-    padding-right: 2em;
-}
-
 .hero-section h2 {
     color: white;
     margin-top: 3rem;
-    font-size: max(4.5vw, 50px);
+    font-size: max(3.75vw, 45px);
     width: 75vw;
     text-align: center;
 }
 
 .hero-section p {
-    font-size: 2rem;
+    font-size: 1.75rem;
     justify-content: center;
 }
 
@@ -408,11 +436,11 @@ header .icon {
 
     .hero-section h2 {
         margin-top: 1rem;
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     .hero-section p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .hero-section button {
@@ -432,6 +460,16 @@ header .icon {
 
     .hero-section h2 {
         width: 90vw;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
     }
 }
 
@@ -459,8 +497,8 @@ header .icon {
 
 #about-us-section img {
     object-fit: cover;
-    height: max(30vw,14rem);
-    width: max(30vw,14rem);
+    height: max(25vw,14rem);
+    width: max(25vw,14rem);
     border-radius: 60%;
     border: 8px solid var(--primary-color);
 }
@@ -493,7 +531,23 @@ header .icon {
     }
 
     #about-us-section p {
-        fontsize: 0.85rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #about-us-section {
+        width: 95%;
+    }
+    
+    #about-us-section h3 {
+        font-size: 1.75rem;
+    }
+
+    #about-us-section img {
+        width: 12rem;
+        height: 12rem;
     }
 }
 
@@ -512,7 +566,7 @@ header .icon {
 }
 
 #services-section h3 {
-    font-size: 3rem;
+    font-size: 2.25rem;
 }
 
 #services-section div {
@@ -584,12 +638,12 @@ header .icon {
     #services-section article{
         width: 14rem;
         gap: 0.5rem;
-        height: 19rem;
+        height: 20rem;
         padding: 0 1rem;    
     }
 
     #services-section article h4 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     #services-section article li {
@@ -604,8 +658,28 @@ header .icon {
     }
 
     #services-section article{
-        height: 14rem;
+        height: 15rem;
         width: 85%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #services-section h3 {
+        font-size: 1.75rem;
+    }
+
+    #services-section article h4 {
+        font-size: 1.15rem;
+    }
+
+    #services-section article p {
+        font-size: 0.85rem;
+    }
+
+    #services-section article {
+        width: 95%;
+        height: auto;
+        padding: 1.25rem 1rem;
     }
 }
 
@@ -656,7 +730,8 @@ header .icon {
 }
 
 #staff-section img {
-    width: 9rem;
+    width: 8rem;
+    height: 8rem;
     padding: 0.5rem;
 }
 
@@ -668,6 +743,7 @@ header .icon {
 
     #staff-section img {
         width: 7.5rem;
+        height: auto;
     }
 
     #staff-section h3 {
@@ -683,11 +759,41 @@ header .icon {
     }
 }
 
+@media screen and (max-width: 500px){
+    #staff-section h3 {
+        font-size: 1.75rem;
+    }
+
+    #staff-section h4 {
+        font-size: 0.85rem;
+    }
+
+    #staff-section p {
+        font-size: 0.75rem;
+    }
+
+    #staff-section div {
+        width: 95%;
+        column-gap: 0;
+    }
+
+    #staff-section article {
+        width: 45%;
+        height: 9.5rem;
+        justify-content: flex-start;
+    }
+
+    #staff-section img {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
 /* EVENTS */
 
 #events-section {
     width: 100vw;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/food-pantry.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/food-pantry.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -718,7 +824,6 @@ header .icon {
 
 #events-section h2 {
     color: white;
-    font-size: 3rem;
 }
 
 #events-section>div {
@@ -739,7 +844,7 @@ header .icon {
 }
 
 #events-section svg {
-    width: 3.5rem;
+    width: 2rem;
     color: var(--accent-color);
 }
 
@@ -847,12 +952,12 @@ button#next-button {
 }
 
 #events-section #food-pantry-card h3, .event-card h3 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
 }
 
 #events-section p {
     width: 90%;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 .events-buttons {
@@ -875,6 +980,10 @@ button#next-button {
     text-decoration: none;
 }
 
+.events-buttons .small-buttons {
+    display: none;
+}
+
 #events-section button:hover {
     box-shadow: 2px 2px 0px black;
 }
@@ -885,11 +994,11 @@ button#next-button {
     }
 
     #events-section h2 {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     #events-section #food-pantry-card h3, .event-card h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #events-section p {
@@ -912,6 +1021,55 @@ button#next-button {
 
     .events-buttons button {
         font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #events-section h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    #events-section .event-card .special-description {
+        font-size: 0.75rem;
+    }
+
+    #events-section .event-card h3, #events-section #food-pantry-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .events-buttons .normal-buttons {
+        display: none;
+    }
+
+    .events-buttons {
+        gap: 0.25rem;
+    }
+
+    #events-section .events-buttons .small-buttons {
+        display: block;
+    }
+
+    #events-section p > strong {
+        display: none;
+    }
+
+    #events-section .event-card, #events-section #food-pantry-card {
+        width: 100%;
+        gap: 0.5rem;
+        box-shadow: none;
+    }
+
+    #events-section #food-pantry-card > div{
+        gap: 0.5rem;
+    }
+
+    .special-event-tag, .weekly-event-tag {
+        display: none;
+    }
+
+    #events-section #food-pantry-card button#next-button, #events-section #food-pantry-card button#back-button {
+        width: 1.5rem;
     }
 }
 
@@ -954,7 +1112,7 @@ button#next-button {
 }
 
 #news-section h2 {
-    font-size: max(3.5vw, 32px);
+    font-size: 2.25rem;
 }
 
 #news-section h3 {
@@ -975,6 +1133,30 @@ button#next-button {
     font-size: max(1.25vw, 15px);
 }
 
+@media screen and (max-width: 500px) {
+
+    #news-section h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    #news-section a {
+        gap: .75rem;
+        height: 375px;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: flex-start;
+    }
+
+    #news-section a div {
+        gap: 0.35rem;
+    }
+
+    #news-section img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* Communnity Section */
 
 .community-sect h2 {
@@ -985,7 +1167,6 @@ button#next-button {
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
-    font-size: max(4.5vw, 42px);
     color: white;
 }
 
@@ -996,35 +1177,35 @@ button#next-button {
 }
 
 .community-sect div img.one {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/menwomen.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/menwomen.webp");
 }
 
 .community-sect div img.one:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/menwomen.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/menwomen.webp");
 }
 
 .community-sect div img.two {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/table.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/table.webp");
 }
 
 .community-sect div img.two:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/table.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/table.webp");
 }
 
 .community-sect div img.three {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/community.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/community.webp");
 }
 
 .community-sect div img.three:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/community.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/community.webp");
 }
 
 .community-sect div img.four {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/chip.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/chip.webp");
 }
 
 .community-sect div img.four:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/chip.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/chip.webp");
 }
 
 .community-sect div img {
@@ -1057,13 +1238,14 @@ button#next-button {
 /* Styling for Donations Page */
 
 .donate-section {
+    width: 100vw;
     padding: 3rem 0;
 }
 
 .donate-section  .donate-description{
     margin: 0 auto;
     padding-bottom: 2rem;
-    width: 60%;
+    width: min(80%, 40rem);
     text-align: center;
     font-size: 1.25rem;
 }
@@ -1071,16 +1253,53 @@ button#next-button {
 .donate-section h2 {
     padding-bottom: 1.25rem;
     color: var(--primary-color);
+    text-align: center;
     font-size: 2.25rem;
 }
 
+.donate-section p {
+    font-size: 1.25rem;
+}
+
 .donate-section .donate-additional {
-    width: 45%;
+    width: min(75%, 25rem);
     text-align: center;
     margin: 0 auto;
     padding-top: 1.25rem;
     font-size: 1rem;
     color: var(--primary-color);
+}
+
+@media screen and (max-width: 900px) {
+    .donate-section h2 {
+        font-size: 2rem;
+    }
+
+    .donate-section p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .donate-section .donate-description {
+        width: 90%;
+        margin-bottom: 0rem;
+        padding-bottom: 1rem;
+    }
+
+    .donate-section h2 {
+        font-size: 1.75rem;
+        width: 95%;
+    }
+
+    .donate-section p {
+        font-size: 0.75rem;
+    }
+
+    .donate-section .donate-additional {
+        font-size: .75rem;
+        width: 90%;
+    }
 }
 
 /* Styling for the Resources Page */
@@ -1096,10 +1315,6 @@ button#next-button {
     align-items: center;
     margin: 0 auto;
     padding: 3rem;
-}
-
-.resources-section h2 {
-    font-size: 3rem;
 }
 
 .resources-section .resources-title {
@@ -1264,6 +1479,43 @@ button#next-button {
     }
 }
 
+@media screen and (max-width: 500px){
+    .resources-section {
+        padding: 2rem 0;
+    }
+
+    .resources-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .resources-section .resources-title p, .resources-section .resources-title a {
+        font-size: .75rem;
+    }
+
+    .resources-section ul.filter-buttons {
+        gap: 0.25rem;
+    }
+
+    .resources-section li button {
+        padding: 0.25rem 0.5rem;
+        border-radius: 8px;
+    }
+
+    .resources-list article {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+        gap: 0.25rem;
+        width: 100%;
+    }
+
+    .resources-list article ul.resources-tags, .resources-list article > div {
+        width: 85%;
+    }
+}
+
+/* Volunteer Section */
+
 .volunteer-section {
     width: min(85vw, 30rem);
     display: flex;
@@ -1327,8 +1579,9 @@ button#next-button {
     border: 1px solid #d5d5d5;
 }
 
-.volunteer-section h2 {
-    font-size: 2rem;
+.volunteer-section .success{
+    align-self: center;
+    width: 15rem;
 }
 
 @media screen and (max-width: 900px){
@@ -1345,7 +1598,7 @@ button#next-button {
         justify-content: flex-start;
     }
 
-    .volunteer-checkbox p {
+    .volunteer-checkbox label {
         font-size: 0.75rem;
     }
 
@@ -1359,12 +1612,15 @@ button#next-button {
         font-size: 1.5rem;
     }
 
-    .volunteer-section label {
-        font-size: 0.85rem;
-    }
-
     .volunteer-section form button {
         width: 7.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .volunteer-section {
+        width: 90%;
+        padding: 0.75rem 1rem;
     }
 }
 
