@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SOMCSMA supports utah refugee communities through events like Eid al-fitr and food pantry drives. Come join us for fun celebrations and to stock up on food.">
-<title>SCSMA | Salt Lake City, Utah</title>
+<title>SOMCSMA | Salt Lake City, Utah</title>
 <link rel="stylesheet" href="styles.min.css">
 <link rel="icon" type="image/webp" href="/images/Somalia_coat_of_arms.webp">
 <link rel="preload" as="image" href="./images/food-pantry.webp" fetchpriority="high">
@@ -153,7 +153,7 @@
             <img class="salaam" src="images/salaam_logo.webp" alt="SALAAM logo" width="180" height="54" />
         </a>
         <a class="UFB" href="https://www.utahfoodbank.org/" target="_blank" aria-label="Visit Utah Food Bank's website">
-            <img src="images/UFB_logo.webp" alt="Utah Food Bank logo" width="121" height="65" />
+            <img src="images/utahfb_logo.webp" alt="Utah Food Bank logo" width="121" height="65" />
         </a>
         <a href="https://dhhs.utah.gov/" target="_blank" aria-label="Visit Utah Health & Human Services' website">
             <img src="images/utahhhs_logo.webp" alt="UtahHHS logo" width="114" height="114"/>
@@ -206,14 +206,14 @@
                     <div class="events-buttons">
                         <a class="normal-buttons" href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank" aria-label="Link to SOMCSMA's Facebook page"><button aria-label="Facebook link">Facebook
                                 Link</button></a>
-                        <a class="normal-buttons" href="./images/Food_Pantry_Schedule.pdf" target="_blank" aria-label="Link to pdf food pantry schedule"><button aria-label="Food pantry schedule">Full Schedule</button></a>
-                        <a class="small-buttons"href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank" aria-label="Link to SOMCSMA's Facebook page"><button aria-label="Facebook link">FB
-                                Link</button></a>
-                        <a class="small-buttons" href="./images/Food_Pantry_Schedule.pdf" target="_blank" aria-label="Link to pdf food pantry schedule"><button aria-label="Food pantry schedule">Schedule</button></a>
-                    </div>
-                </div>
-                `;
-                
+                                <a class="small-buttons"href="https://www.facebook.com/profile.php?id=100064389474153" target="_blank" aria-label="Link to SOMCSMA's Facebook page"><button aria-label="Facebook link">FB
+                                    Link</button></a>
+                                    <a style="display:hidden;" class="small-buttons" href="./images/Food_Pantry_Schedule.pdf" target="_blank" aria-label="Link to pdf food pantry schedule"><button aria-label="Food pantry schedule">Schedule</button></a>
+                                    </div>
+                                    </div>
+                                    `;
+                                    
+                                    // <a class="normal-buttons" href="./images/Food_Pantry_Schedule.pdf" target="_blank" aria-label="Link to pdf food pantry schedule"><button aria-label="Food pantry schedule">Full Schedule</button></a>
                 if(item.position < maxPosition){
                     content += `
                         <button id="next-button" aria-label="hidden food pantry next button"><svg fill="#418fde" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 360.149 360.149" xml:space="preserve" stroke="#418fde"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <g> <path d="M27.075,360.149c-0.991-5.068-23.28-125.044,36.026-201.698c27.129-35.074,66.968-55.187,118.496-59.835V0 l156.392,156.386L181.603,312.79V210.132c-4.495-0.613-11.436-1.327-19.831-1.327c-45.096,0-120.72,19.491-120.72,150.006 L27.075,360.149z"></path> </g> </g> </g> </g> </g></svg></button>
@@ -225,7 +225,6 @@
                 }
             
                 card.innerHTML = content;
-                console.log(card);
 
                 const nextButton = document.getElementById('next-button');
                 if(nextButton){
@@ -234,7 +233,6 @@
                         displayCard(position + 1);
                     });
                 }
-                console.log(nextButton);
 
                 if(item.position !== originalPosition){
                     const backButton = document.getElementById('back-button');
@@ -244,7 +242,6 @@
                             displayCard(position - 1);
                         });
                     }
-                    console.log(nextButton);
                 }
             }
         })
@@ -253,9 +250,8 @@
     function findNextDate(){
         let position = 0;
         pantrySchedule.forEach(item => {
-            const dateObj = new Date(item.date);
-            const date = dateObj.toLocaleDateString();
-            const today = (new Date()).toLocaleDateString();
+            const date = new Date(item.date);
+            const today = new Date();
     
             if(date > today && !found){
                 found = true;
@@ -279,7 +275,6 @@
 <script>
     function myFunction() {
         var navLinks = document.getElementById("nav-links");
-        console.log(navLinks)
         if (navLinks.style.display === "block") {
             navLinks.style.display = "none";
         } else {

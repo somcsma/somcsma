@@ -381,7 +381,7 @@ header .icon {
 /* MISSION */
 
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/menwomen.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/menwomen.webp");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: top;
@@ -793,7 +793,7 @@ header .icon {
 
 #events-section {
     width: 100vw;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/food-pantry.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/food-pantry.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1176,13 +1176,13 @@ button#next-button {
     text-align: center;
 }
 
-.community-sect div img.one {
+/* .community-sect div img.one {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/menwomen.webp");
 }
 
 .community-sect div img.one:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/menwomen.webp");
-}
+} */
 
 .community-sect div img.two {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/table.webp");
