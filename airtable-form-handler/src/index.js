@@ -22,7 +22,6 @@ async function createAirtableRecord(env, body) {
 		);
 		return result;
 	} catch (error) {
-		console.error(error);
 		return new Response("Failed to connect to Airtable", { status: 502 });
 	}
 }
@@ -48,7 +47,6 @@ async function submitHandler(request, env) {
 			},
 		};
 		const airtableRes = await createAirtableRecord(env, reqBody);
-		console.log(airtableRes);
 
 		if (!airtableRes.ok) {
 			const errorText = await airtableRes.text();
