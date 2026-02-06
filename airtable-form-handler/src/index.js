@@ -53,8 +53,15 @@ async function submitHandler(request, env) {
 			return new Response(`Airtable Error: ${errorText}`, { status: airtableRes.status });
 		}
 
-		return Response.redirect("https://somcsma.org/volunteerSubmit.html", 302);
-    } catch (err) {
+		return new Response(JSON.stringify({ status: "success" }), {
+    status: 200,
+    headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*", // Allows your local host to see the result
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type"
+    }
+})} catch (err) {
         return new Response(`Worker Error: ${err.message}`, { status: 500 });
     }
 }
@@ -62,6 +69,15 @@ async function submitHandler(request, env) {
 
 export default {
 	async fetch(request, env) {
+		if (request.method === "OPTIONS") {
+            return new Response(null, {
+                headers: {
+                    "Access-Control-Allow-Origin": "*", // Or "http://127.0.0.1:3002"
+                    "Access-Control-Allow-Methods": "POST, OPTIONS",
+                    "Access-Control-Allow-Headers": "Content-Type",
+                },
+            });
+        }
 		const url = new URL(request.url);
 		if (url.pathname === "/submit" || url.pathname === "/submit/") {
 			return await submitHandler(request, env);

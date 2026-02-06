@@ -44,7 +44,7 @@
 <main role="main">
     <div class="volunteer-section">
         <h2>Volunteer Signup</h2>
-        <form id="volunteer-form" action="https://volunteer-airtable-form.somcsma.workers.dev/submit" method="POST">
+        <form id="volunteer-form">
             <div>
                 <label for="first_name">First Name <em>*</em></label>
                 <input id="first_name" name="first_name" type="text" placeholder="Enter your first name" required>
@@ -134,14 +134,31 @@
 
 <script>
     const form = document.getElementById('volunteer-form');
-
-    form.addEventListener('submit', function(event) {
+    
+    form.addEventListener('submit',async function(event) {
+        event.preventDefault();
         const checkedBoxes = document.querySelectorAll('input[name="interest"]:checked');
-
-        if (checkedBoxes.length === 0) {
-        event.preventDefault(); 
         
-        alert("Please select at least one interest!");
+        if (checkedBoxes.length === 0) {            
+            alert("Please select at least one interest!");
+            return;
+        }
+        try{
+            const response = await fetch('https://volunteer-airtable-form.somcsma.workers.dev/submit', {
+                method: 'POST',
+                body: new FormData(form)
+            });
+        
+            if (response.ok) {
+                window.location.href = "volunteerSubmit.html";
+            }else {
+                const errorText = await response.text();
+                console.error("Worker Error:", errorText);
+                alert("Submission failed. Check console for details.");
+            }
+        } catch(error){
+            console.error('Error submitting form:', error);
+            alert("There was an error submitting the form. Please try again later.");
         }
     });
     
