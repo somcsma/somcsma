@@ -336,10 +336,6 @@ header .icon {
         gap: 0.5rem 1rem;
     }
 
-    .footer-content div p {
-        font-size: 0.75rem;
-    }
-
     #footer .footer-content svg {
         display: none;
     }
@@ -374,7 +370,6 @@ header .icon {
     
     .footer-content div p {
         text-align: center;
-        font-size: 0.35rem;
     }
 }
 
