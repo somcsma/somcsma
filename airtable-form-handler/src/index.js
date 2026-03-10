@@ -43,7 +43,8 @@ async function submitHandler(request, env) {
 				"Last Name": data.last_name || "",
 				"Email": data.email || "",
 				"Phone": data.phone || "",
-				"Interests": selectedInterests
+				"Interests": selectedInterests,
+				"Other Interests": data.other_text || "",
 			},
 		};
 		const airtableRes = await createAirtableRecord(env, reqBody);

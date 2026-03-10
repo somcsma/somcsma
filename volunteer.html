@@ -59,11 +59,11 @@
             </div>
             <div>
                 <label for="phone">Phone Number <em>*</em></label>
-                <input name="phone" id="phone" type="tel" placeholder="(123) 456-789" required>
+                <input name="phone" id="phone" type="tel" placeholder="(123) 456-7890" required>
             </div>
             <div class="volunteer-interest-container">
                 <label>Areas of Interest <em>*</em></label>
-                <div class="checkbox-container">
+                <div class="checkbox-container" style="justify-content: flex-start;">
                     <div  class="volunteer-checkbox">
                         <input id="outreach" type="checkbox" name="interest" value="outreach">
                         <label for="outreach" >Outreach</label>
@@ -79,6 +79,15 @@
                     <div class="volunteer-checkbox">
                         <input id="foodPantry" type="checkbox" name="interest" value="food_pantry">
                         <label for="foodPantry">Food Pantry</label>
+                    </div>
+                    <div class="other-container" style="display: flex; flex-direction: row; align-items: center;">
+                        <div class="volunteer-checkbox" style="width: auto">
+                            <input id="other" type="checkbox" name="interest" value="other" onchange="toggleOtherInput(this)">
+                            <label for="other">Other</label>
+                        </div>
+                        <div id="other-input-container" style="display:none; width:100%;">
+                            <input id="other_text" name="other_text" type="text" placeholder="Please specify..." style="width:100%; height: 1rem; box-sizing:border-box; border-radius: 4px;">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,6 +170,11 @@
             alert("There was an error submitting the form. Please try again later.");
         }
     });
+
+    function toggleOtherInput(checkbox) {
+        const container = document.getElementById('other-input-container');
+        container.style.display = checkbox.checked ? 'block' : 'none';
+    }
     
     function myFunction() {
         var navLinks = document.getElementById("nav-links");
